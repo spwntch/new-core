@@ -49,7 +49,7 @@ dependencies:
     version: 8.1.7(react@18.3.1)
   framer-motion:
     specifier: ^11.3.13
-    version: 11.3.13(react-dom@18.3.1)(react@18.3.1)
+    version: 11.3.16(react-dom@18.3.1)(react@18.3.1)
   lucide-react:
     specifier: ^0.408.0
     version: 0.408.0(react@18.3.1)
@@ -2872,6 +2872,23 @@ packages:
       - verdaccio
     dev: true
 
+  /@nrwl/js@19.5.0(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.0)(typescript@5.4.5)(verdaccio@5.31.1):
+    resolution: {integrity: sha512-aQ6y64Du6GBETjgFZZ6B25OcFIKUx+kXzD/GXzDhAXfVYqZLhkK63QF2nJIY0RE158FdCWtb6/IJ22UiIHHrgw==}
+    dependencies:
+      '@nx/js': 19.5.0(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.0)(typescript@5.4.5)(verdaccio@5.31.1)
+    transitivePeerDependencies:
+      - '@babel/traverse'
+      - '@swc-node/register'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - debug
+      - nx
+      - supports-color
+      - typescript
+      - verdaccio
+    dev: true
+
   /@nrwl/js@19.5.0(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.0)(typescript@5.5.3)(verdaccio@5.31.1):
     resolution: {integrity: sha512-aQ6y64Du6GBETjgFZZ6B25OcFIKUx+kXzD/GXzDhAXfVYqZLhkK63QF2nJIY0RE158FdCWtb6/IJ22UiIHHrgw==}
     dependencies:
@@ -3221,7 +3238,7 @@ packages:
       '@babel/preset-env': 7.24.8(@babel/core@7.24.9)
       '@babel/preset-typescript': 7.24.7(@babel/core@7.24.9)
       '@babel/runtime': 7.24.8
-      '@nrwl/js': 19.5.0(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.0)(typescript@5.5.3)(verdaccio@5.31.1)
+      '@nrwl/js': 19.5.0(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.0)(typescript@5.4.5)(verdaccio@5.31.1)
       '@nx/devkit': 19.5.0(nx@19.5.0)
       '@nx/workspace': 19.5.0(@swc-node/register@1.9.2)(@swc/core@1.5.29)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.24.9)
@@ -4941,7 +4958,7 @@ packages:
       storybook: ^8.2.5
     dependencies:
       storybook: 8.2.5
-      unplugin: 1.11.0
+      unplugin: 1.12.0
     dev: true
 
   /@storybook/csf-tools@8.2.5(storybook@8.2.5):
@@ -10280,8 +10297,8 @@ packages:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: true
 
-  /framer-motion@11.3.13(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-5sKVDYia30MW6fqRex4RZ8lBvloOzMD+uLy9sTlgUYgnAeez1uJ3anZYaJZURt1rxy7NVI8ypZt1o41wn4vSGw==}
+  /framer-motion@11.3.16(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-wn5Jf+3o5JdrNy/Xik6dBSWB0uOFPJaeDs7W7QuXnEw877OFoa5/HtoCfM3bdGxyUW8rP97dP0xE4cEJaqECBw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -14254,7 +14271,7 @@ packages:
       lilconfig: 3.1.2
       postcss: 8.4.38
       ts-node: 10.9.1(@swc/core@1.5.29)(@types/node@18.16.9)(typescript@5.5.3)
-      yaml: 2.4.5
+      yaml: 2.5.0
 
   /postcss-loader@6.2.1(postcss@8.4.38)(webpack@5.93.0):
     resolution: {integrity: sha512-WbbYpmAaKcux/P66bZ40bpWsBucjx/TTgVVzRZ9yUO8yQfVBlameJ0ZGVaPfH64hNSBh63a+ICP5nqOpBA0w+Q==}
@@ -16960,8 +16977,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin@1.11.0:
-    resolution: {integrity: sha512-3r7VWZ/webh0SGgJScpWl2/MRCZK5d3ZYFcNaeci/GQ7Teop7zf0Nl2pUuz7G21BwPd9pcUPOC5KmJ2L3WgC5g==}
+  /unplugin@1.12.0:
+    resolution: {integrity: sha512-KeczzHl2sATPQUx1gzo+EnUkmN4VmGBYRRVOZSGvGITE9rGHRDGqft6ONceP3vgXcyJ2XjX5axG5jMWUwNCYLw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       acorn: 8.12.1
@@ -17817,8 +17834,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml@2.4.5:
-    resolution: {integrity: sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==}
+  /yaml@2.5.0:
+    resolution: {integrity: sha512-2wWLbGbYDiSqqIKoPjar3MPgB94ErzCtrNE1FdqGuaO0pi2JGjmE8aW8TDZwzU7vuxcGRdL/4gPQwQ7hD5AMSw==}
     engines: {node: '>= 14'}
     hasBin: true
 
