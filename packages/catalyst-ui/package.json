@@ -12,7 +12,12 @@
       "default": "./style.css"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.13"
+
+  },
   "peerDependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1"
