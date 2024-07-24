@@ -1,12 +1,20 @@
 {
   "name": "@spwntch/catalyst-ui",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
     ".": {
       "import": "./index.mjs",
       "require": "./index.js"
+    },
+    "./styles": {
+      "default": "./style.css"
     }
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }

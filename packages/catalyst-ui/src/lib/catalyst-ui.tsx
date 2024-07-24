@@ -1,7 +1,7 @@
 export function CatalystUi() {
   return (
-    <div>
-      <h1>Welcome to CatalystUi!</h1>
+    <div className="container">
+      <h1 className="text-5xl text-red-500">Welcome to CatalystUi!</h1>
     </div>
   );
 }
