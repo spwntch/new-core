@@ -1,1 +1,2 @@
-export { default as Pattern } from './pattern/pattern';
+export { default as PatternOne } from './pattern-one';
+export { default as PatternTwo } from './pattern-two';
