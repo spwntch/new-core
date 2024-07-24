@@ -15,7 +15,7 @@ export const parameters: Parameters = {
   controls: { exclude: ['children'] },
   options: {
     storySort: {
-      order: ['ui', ['link', 'button', '*'], '*'],
+      order: ['examples', 'ui', ['link', 'button', '*'], '*'],
     },
   },
   // controls: { exclude: ['children'] },

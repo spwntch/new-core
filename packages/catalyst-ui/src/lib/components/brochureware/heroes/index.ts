@@ -1,1 +1,1 @@
-export * from './simple-hero/simple-hero';
+export { default as SimpleHero } from './simple-hero/simple-hero';
