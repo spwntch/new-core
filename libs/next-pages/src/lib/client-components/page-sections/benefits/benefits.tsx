@@ -1,6 +1,6 @@
 'use client';
 
-import { IContent, IImage, SplitImageContentSection } from '@spwntch/react-ui';
+import { IContent, IImage, SplitImageContentSection } from '@spwntch/shadcn-ui';
 
 export interface BenefitsProps {
   benefits: { image: IImage; content: IContent }[];

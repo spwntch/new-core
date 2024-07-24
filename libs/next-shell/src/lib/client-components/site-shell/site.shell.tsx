@@ -1,9 +1,9 @@
 'use client';
 import {
-    IShellProviderProps,
-    ShellProvider,
-    SiteShellStarter
-} from '@spwntch/react-ui';
+  IShellProviderProps,
+  ShellProvider,
+  SiteShellStarter,
+} from '@spwntch/shadcn-ui';
 import { PropsWithChildren } from 'react';
 
 export interface SiteShellProps extends IShellProviderProps {

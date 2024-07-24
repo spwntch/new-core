@@ -1,4 +1,4 @@
-import { IContent, IImage } from '@spwntch/react-ui';
+import { IContent, IImage } from '@spwntch/shadcn-ui';
 import {
   Benefits,
   Hero,

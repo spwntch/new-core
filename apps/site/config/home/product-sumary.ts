@@ -1,4 +1,4 @@
-import { IContent } from '@spwntch/react-ui';
+import { IContent } from '@spwntch/shadcn-ui';
 
 export const THE_ICP_PLAYBOOK: IContent = {
   title: {

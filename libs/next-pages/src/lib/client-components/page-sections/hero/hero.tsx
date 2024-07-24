@@ -1,5 +1,5 @@
 'use client';
-import { IContent, IImage, ImageContentSection } from '@spwntch/react-ui';
+import { IContent, IImage, ImageContentSection } from '@spwntch/shadcn-ui';
 import React from 'react';
 
 export interface IHeroProps {

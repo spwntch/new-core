@@ -1,4 +1,4 @@
-import { IContent, IImage } from '@spwntch/react-ui';
+import { IContent, IImage } from '@spwntch/shadcn-ui';
 
 export const BENEFITS: { image: IImage; content: IContent }[] = [
   {

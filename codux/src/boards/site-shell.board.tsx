@@ -2,7 +2,7 @@ import {
   DesktopTopNavbar,
   RegularFooter,
   ShellProvider,
-} from '@spwntch/react-ui';
+} from '@spwntch/shadcn-ui';
 import { createBoard } from '@wixc3/react-board';
 import { brand, primaryNav } from '../config';
 

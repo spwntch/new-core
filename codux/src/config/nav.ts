@@ -1,4 +1,4 @@
-import { INavItem } from '@spwntch/react-ui';
+import { INavItem } from '@spwntch/shadcn-ui';
 
 export const primaryNav: INavItem[] = [
   { label: 'Our Backstory', href: '/about' },

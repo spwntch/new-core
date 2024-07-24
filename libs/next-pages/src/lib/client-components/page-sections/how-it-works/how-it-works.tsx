@@ -1,5 +1,5 @@
 'use client';
-import { ContentSection, IContent } from '@spwntch/react-ui';
+import { ContentSection, IContent } from '@spwntch/shadcn-ui';
 
 type Props = { content: IContent };
 
