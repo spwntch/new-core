@@ -21,6 +21,7 @@
       "@/next-shell": ["libs/next-shell/src/index.ts"],
       "@/next-shell/server": ["libs/next-shell/src/server.ts"],
       "@/storybook": ["storybook/src/index.ts"],
+      "@spwntch/catalyst-ui": ["packages/catalyst-ui/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
     }
   },
