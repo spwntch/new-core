@@ -20,7 +20,7 @@ const config: StorybookConfig = {
   ],
   stories: [
     '../src/docs/**/!(_)*.mdx',
-    '../../packages/**/src/**/!(_)*.stories.@(js|jsx|ts|tsx)',
+    '../../packages/!(catalyst-ui)**/src/**/!(_)*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-essentials',

@@ -1,2 +1,3 @@
 import './tailwind.css';
-export * from './lib/catalyst-ui';
+export * from './lib/components/button/button';
+export * from './lib/components/link/link';
