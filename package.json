@@ -14,8 +14,8 @@
     "release": "pnpm dlx nx release",
     "publish": "pnpm dlx nx release publish",
     "storybook": "pnpm dlx nx run storybook:storybook",
-    "build": "pnpm dlx nx run journey-mapping:build",
-    "dev": "pnpm dlx nx run journey-mapping:dev",
+    "build": "pnpm dlx nx run icp-generator:build",
+    "dev": "pnpm dlx nx run icp-generator:dev",
     "ci": "pnpm dlx nx run-many -t build lint test build-storybook"
   },
   "private": true,
@@ -30,6 +30,7 @@
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-menubar": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@radix-ui/react-radio-group": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-hooks-library/core": "^0.6.2",
     "cheerio": "1.0.0-rc.12",

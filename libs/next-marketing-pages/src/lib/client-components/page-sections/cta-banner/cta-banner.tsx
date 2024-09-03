@@ -13,7 +13,7 @@ export const CtaBanner = ({
   onCtaClick,
 }: CtaBannerProps) => {
   return (
-    <div className={cn('flex-col pt-12 pb-28 ', className)}>
+    <div className={cn('flex-col pt-12 pb-12 ', className)}>
       <div className="md:container px-3">
         <SimpleJustifiedBanner innerContent={content} onCtaClick={onCtaClick} />
       </div>
