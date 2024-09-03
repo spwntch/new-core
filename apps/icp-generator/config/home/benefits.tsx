@@ -1,14 +1,11 @@
 import { IContent } from '@spwntch/react-ui';
-import { CheckCircle, TrendingUp, Shield } from 'lucide-react';
 
 export const BENEFITS: IContent = {
   heading: {
     content: `A Simple, Elegant Solution`,
-    className: 'text-3xl font-bold mb-4',
   },
   subheading: {
-    content: 'Why You Should Choose Our AI Driven ICP Generator',
-    className: 'text-xl mb-6',
+    content: 'Why You Should Choose Our AI Powered ICP Generator',
   },
   bullets: [
     {
@@ -51,8 +48,8 @@ export const BENEFITS: IContent = {
   ],
   body: {
     content: [
-      'The AI Driven ICP Generator is more than just a tool—it’s a strategic advantage that helps you refine your approach, maximize efficiency, and achieve your business goals with confidence.',
+      'The AI Powered ICP Generator is more than just a tool—it’s a strategic advantage that helps you refine your approach, maximize efficiency, and achieve your business goals with confidence.',
     ],
-    className: 'max-w-3xl mt-8',
+    className: 'max-w-3xl',
   },
 };

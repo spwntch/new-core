@@ -1,6 +1,7 @@
 import { DigitalProductLandingPage } from '@/next-marketing-pages';
 import {
   BENEFITS,
+  FAQ,
   FEATURES,
   HERO_CONTENT,
   HERO_IMAGE,
@@ -16,6 +17,7 @@ export default function Index() {
       benefits={BENEFITS}
       features={FEATURES}
       ctaBanner={POST_BENEFITS_CTA_BANNER}
+      faqs={FAQ}
     />
   );
 }

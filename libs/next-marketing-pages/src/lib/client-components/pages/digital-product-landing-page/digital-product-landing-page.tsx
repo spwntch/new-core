@@ -1,7 +1,7 @@
 'use client';
 import { FullImageHero, IContent, IImage } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
-import { Benefits, CtaBanner, FeaturesGrid } from '../../page-sections';
+import { Benefits, CtaBanner, Faqs, FeaturesGrid } from '../../page-sections';
 
 export interface DigitalProductLandingPageProps {
   hero: {
@@ -13,15 +13,12 @@ export interface DigitalProductLandingPageProps {
   benefits?: IContent;
   ctaBanner?: IContent;
   features?: IContent;
-  // benefits?: IContent;
+  faqs?: IContent;
   // caseStudies?: {
   //   content: IContent;
   //   articles: IMdxDoc[];
   // };
-  // ctaBanner?: IContent;
-  // features?: IContent;
   // howItWorks?: IContent;
-  // faqs?: IContent;
   // pricing?: IContent;
   // value?: IContent[];
   // cost?: IPricing;
@@ -43,6 +40,7 @@ export const DigitalProductLandingPage = ({
   benefits,
   ctaBanner,
   features,
+  faqs
 }: DigitalProductLandingPageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -73,6 +71,7 @@ export const DigitalProductLandingPage = ({
       {features && <FeaturesGrid id="product" content={features} 
       className="bg-muted"
       />}
+       {faqs && <Faqs id="faq" content={faqs}  />}
     </div>
   );
 };

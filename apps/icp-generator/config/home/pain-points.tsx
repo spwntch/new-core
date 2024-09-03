@@ -4,23 +4,21 @@ import { Clock, Target, Layers } from 'lucide-react';
 export const PAIN_POINTS: IContent = {
   heading: {
     content: 'Addressing Your Biggest Challenges',
-    className: 'text-3xl font-bold mb-4',
   },
   subheading: {
-    content: 'How the AI Driven ICP Generator Solves Your Biggest Problems',
-    className: 'text-xl mb-6',
+    content: 'How the AI Powered ICP Generator Solves Your Biggest Problems',
   },
   bullets: [
     {
-      icon: <Clock className="h-8 w-8 text-primary" />,
+      icon: <Clock  />,
       heading: 'Speed in Decision-Making',
       body: [
         'Traditional methods of developing ICPs are too slow, delaying crucial decisions in product development, marketing, and growth strategies.',
-        'Our AI Driven ICP Generator provides instant access to accurate customer profiles, enabling faster, more informed decision-making.',
+        'Our AI Powered ICP Generator provides instant access to accurate customer profiles, enabling faster, more informed decision-making.',
       ],
     },
     {
-      icon: <Target className="h-8 w-8 text-primary" />,
+      icon: <Target  />,
       heading: 'Precision in Targeting',
       body: [
         'Without precise, data-driven insights, marketing campaigns and product features can become misaligned, leading to wasted resources.',
@@ -28,7 +26,7 @@ export const PAIN_POINTS: IContent = {
       ],
     },
     {
-      icon: <Layers className="h-8 w-8 text-primary" />,
+      icon: <Layers  />,
       heading: 'Alignment Across Teams',
       body: [
         'Different departments often have varying interpretations of the ideal customer, leading to misalignment and inefficiencies.',
@@ -38,8 +36,8 @@ export const PAIN_POINTS: IContent = {
   ],
   body: {
     content: [
-      'These pain points are common hurdles in product and marketing strategies, but with the AI Driven ICP Generator, you can overcome them and drive your business forward with confidence.',
+      'These pain points are common hurdles in product and marketing strategies, but with the AI Powered ICP Generator, you can overcome them and drive your business forward with confidence.',
     ],
-    className: 'max-w-3xl mt-8',
+    className: 'max-w-3xl',
   },
 };
