@@ -12,7 +12,7 @@ import {
 const title = 'AI Powered ICP Generator | Generate Ideal Customer Profiles with AI';
 const description =
   'Instantly create accurate Ideal Customer Profiles and Buyer Personas with our AI Powered ICP Generator. Tailor your product and marketing strategies to your ideal customers with data-driven insights. Enhance targeting, reduce risk, and accelerate time-to-market. Start refining your customer strategy today!';
-const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/products/icp-generatoricp-generator-hero-imapge.png`;
+const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/products/icp-generator/icp-generator-hero-imapge.png`;
 const keywords: string[] = [
   'AI Powered ICP Generator',
   'Ideal Customer Profile',

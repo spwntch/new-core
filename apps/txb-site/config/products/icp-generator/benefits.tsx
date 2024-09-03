@@ -10,7 +10,7 @@ export const BENEFITS: IContent = {
   bullets: [
     {
       image: {
-        src: 'images/products/icp-generator/data-driven-accuracy.webp',
+        src: '/images/products/icp-generator/data-driven-accuracy.webp',
         alt: 'Data Driven Accuracy',
       },
       heading: 'Data-Driven Accuracy',
@@ -20,7 +20,7 @@ export const BENEFITS: IContent = {
     },
     {
       image: {
-        src: 'images/products/icp-generator/faster-time-to-market.webp',
+        src: '/images/products/icp-generator/faster-time-to-market.webp',
         alt: 'Faster Time to Market',
       },
       heading: 'Faster Time to Market',
@@ -29,7 +29,7 @@ export const BENEFITS: IContent = {
       ],
     },
     {
-      image: { src: 'images/products/icp-generator/reduced-risk.webp', alt: 'Reduce Risk' },
+      image: { src: '/images/products/icp-generator/reduced-risk.webp', alt: 'Reduce Risk' },
       heading: 'Reduced Risk',
       body: [
         'Mitigate the risks of targeting the wrong audience or misaligning your strategies by using accurate, AI-generated ICPs and Buyer Personas tailored to your specific market.',
@@ -37,7 +37,7 @@ export const BENEFITS: IContent = {
     },
     {
       image: {
-        src: 'images/products/icp-generator/experiment-with-confidence.webp',
+        src: '/images/products/icp-generator/experiment-with-confidence.webp',
         alt: 'Experiment with Confidence',
       },
       heading: 'The Freedom to Experiment',
