@@ -10,7 +10,7 @@ export const POST_BENEFITS_CTA_BANNER: IContent = {
   },
   ctas: [
     {
-      label: 'TEST PRODUCT IDEA',
+      label: 'TEST YOUR PRODUCT IDEA',
     },
   ],
 };

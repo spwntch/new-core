@@ -1,5 +1,5 @@
-import { SiteShell } from '@/next-marketing-pages';
-import { brand } from '../config';
+import { INavBar, SiteShell } from '@/next-marketing-pages';
+import { brand, NAV } from '../config';
 import './global.css';
 
 export const metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const navbar = {
+  const navbar: INavBar = {
     floating: true,
     logoHeight: 52,
   };
@@ -22,7 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <SiteShell brand={brand} navbar={navbar}>
+        <SiteShell
+          brand={brand}
+          navItems={NAV}
+          navbar={navbar}
+          underContruction={true}
+        >
           {children}
         </SiteShell>
       </body>

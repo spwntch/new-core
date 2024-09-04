@@ -7,14 +7,16 @@ import {
 import { usePathname, useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 
+export interface INavBar {
+  floating?: boolean;
+  classNames?: string;
+  logoHeight?: number;
+  alignment?: 'start' | 'center' | 'end';
+  disableThemeToggle?: boolean;
+}
+
 export interface SiteShellProps extends IShellProviderProps {
-  navbar: {
-    floating?: boolean;
-    classNames?: string;
-    logoHeight?: number;
-    alignment?: 'start' | 'center' | 'end';
-    disableThemeToggle?: boolean;
-  };
+  navbar: INavBar;
   underContruction?: boolean;
   githubUrl?: string;
 }
@@ -28,7 +30,7 @@ export const SiteShell = ({
   children,
 }: SiteShellProps & PropsWithChildren) => {
   const router = useRouter();
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const handleLinkTo = (url: string) => {
     router.push(url);
   };
@@ -36,7 +38,8 @@ export const SiteShell = ({
   return (
     <ShellProvider
       brand={brand}
-      navItems={pathname === '/' ? navItems : undefined}
+      navItems={navItems}
+      // navItems={pathname === '/' ? navItems : undefined}
       defaultTheme="dark"
     >
       <SiteShellStarter

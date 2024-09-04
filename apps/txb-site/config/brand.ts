@@ -17,9 +17,10 @@ export const brand: IBrand = {
   about: {
     body: [
       'Welcome to The Experience Business (or TXB as we like to call it).',
-      `We're a leading African consultancy since 2004. We enhance customer and user experiences across industries like financial services, telecom, insurance, hospitality, and entertainment.`,
-      'At TXB, we turn data into actionable strategies that transform brand perceptions and customer experiences. With a focus on professionalism, quality, and long-term client partnerships, we deliver high-quality results that align with our clients’ goals.',
-      'Join us to uncover business opportunities and achieve tangible results.',
+      'Since 2004, we’ve been at the forefront of customer and user experience innovation, helping businesses across industries like financial services, telecom, insurance, hospitality, and entertainment achieve transformative results.',
+      'We are dedicated to making our cutting-edge intellectual property in UX, lean product development, and insights management accessible to a broader audience. By harnessing the power of advanced technology and artificial intelligence, we empower business users to implement sophisticated strategies that were once only available to top-tier consultancies.',
+      'Our mission is to turn data into actionable insights that drive meaningful change, elevating brand experiences and enhancing customer satisfaction. With a commitment to quality, innovation, and long-term partnerships, we deliver solutions that not only meet but exceed our clients’ goals.',
+      'Join us at TXB and unlock the potential of your business with technology-driven strategies that lead to tangible, lasting results.',
     ],
   },
   contact: {

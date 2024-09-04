@@ -45,7 +45,7 @@ export const HERO_CONTENT: IContent = {
   ],
   ctas: [
     {
-      label: 'INSTANT PURCHASE',
+      label: 'INSTANT ICP - $49',
       variant: { size: 'xl' },
       //   url: '/start',
       //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',

@@ -12,10 +12,11 @@ import { useRouter } from 'next/navigation';
 export interface BlogProps {
   content: IContent;
   articles: IMdxDoc[];
+  path?: string;
   className?: string;
 }
 
-export const Blog = ({ content, articles, className }: BlogProps) => {
+export const Blog = ({ content, articles, path, className }: BlogProps) => {
   const router = useRouter();
   const header: IContent = {
     heading: content.heading,
@@ -28,7 +29,7 @@ export const Blog = ({ content, articles, className }: BlogProps) => {
         <ContentContainer innerContent={header} />
         <ArticleGrid
           articles={articles}
-          onClickArticle={(slug) => router.push(`/case-studies/${slug}`)}
+          onClickArticle={(slug) => router.push(`/${path || 'blog'}/${slug}`)}
         />
       </div>
     </div>

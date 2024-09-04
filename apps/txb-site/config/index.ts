@@ -1,3 +1,5 @@
+export * from './blog';
 export * from './brand';
-export * from './home/hero';
+export * from './home';
+export * from './nav';
 
