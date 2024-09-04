@@ -17,7 +17,7 @@ export interface DigitalProductsHomePageProps {
     content: IContent;
   };
   clientLogos?: string[];
-  products: {
+  products?: {
     content: IContent;
   };
   about?: {
@@ -56,9 +56,11 @@ export const DigitalProductsHomePage = ({
         }}
       />
       {clientLogos && <LogoCarousel logos={clientLogos} className="bg-white" />}
-      <div id="products">
-        <Products content={products.content}/>
-      </div>
+      {products && (
+        <div id="products">
+          <Products content={products.content} />
+        </div>
+      )}
       {about && <About id="about" {...about} className="bg-muted" />}
       {blog && (
         <Blog
