@@ -2,7 +2,7 @@ import { IContent, IImage } from '@spwntch/react-ui';
 
 export const CONTACT_HERO_IMAGE: IImage = {
   src: '/images/contact/contact-hero.webp',
-  darken: '75%',
+  darken: '50%',
 };
 
 export const CONTACT_HERO_CONTENT: IContent = {
