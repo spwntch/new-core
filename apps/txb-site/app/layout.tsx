@@ -17,6 +17,7 @@ export default function RootLayout({
   const navbar: INavBar = {
     floating: true,
     logoHeight: 52,
+    disableThemeToggle: true,
   };
 
   return (
