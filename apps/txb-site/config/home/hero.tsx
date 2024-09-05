@@ -13,7 +13,7 @@ export const HOME_HERO_CONTENT: IContent = {
   subheading: 'Available now.',
   ctas: [
     {
-      label: 'GET STARTED',
+      label: 'LEARN MORE',
       variant: { size: '2xl' },
     },
   ],
