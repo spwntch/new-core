@@ -4,6 +4,7 @@ import { IImage } from './image';
 
 // If there is no icon, image, or emoji, the bullet will be a simple list-disc.
 export interface IBullet {
+  comingSoon?: boolean; // If true, the bullet will be styled differently to indicate that it is coming soon
   icon?: ReactNode; // You can inject a lucide-react component here, for example
   image?: IImage; // renders a Avatar for the bullet
   emoji?: string; // Renders a span with the emoji, eg "👋"
@@ -12,6 +13,7 @@ export interface IBullet {
   subheading?: string; // An optional heading for the bullet. If present, the bullet (icon/image/emoji) can be bigger since the heading and body are on separate lines
   body: string[]; // the main bullet text.
   bullets?: IBullet[];
+  href?: string;
   className?: string;
 }
 

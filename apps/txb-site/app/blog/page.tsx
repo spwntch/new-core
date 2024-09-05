@@ -1,11 +1,18 @@
-import { DigitalProductsHomePage } from '@/next-marketing-pages';
-import { BLOG_HERO, BLOG_HERO_IMAGE } from '../../config';
-import React from 'react';
+import { ArticlesPage } from '@/next-marketing-pages';
+import {
+  BLOG_HERO,
+  BLOG_HERO_IMAGE,
+  BLOG_POSTS,
+  FEATURED_POSTS,
+} from '../../config';
 
 const BlogPage = () => {
   return (
-    <DigitalProductsHomePage
+    <ArticlesPage
       hero={{ image: BLOG_HERO_IMAGE, content: BLOG_HERO }}
+      blog={{
+        articles: BLOG_POSTS,
+      }}
       // clientLogos={TECH_LOGOS}
       // products={{ content: PRODUCTS }}
       // blog={{

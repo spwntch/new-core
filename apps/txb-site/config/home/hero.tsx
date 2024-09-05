@@ -7,7 +7,7 @@ export const HOME_HERO_IMAGE: IImage = {
 
 export const HOME_HERO_CONTENT: IContent = {
   title: {
-    content: 'Lean Experience Innovation Tools',
+    content: 'Lean Experience Innovation',
     className: 'max-w-2xl',
   },
   subheading: 'Available now.',

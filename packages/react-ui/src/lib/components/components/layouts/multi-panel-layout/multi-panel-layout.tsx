@@ -49,7 +49,7 @@ export const MultiPanelLayout = forwardRef<
     return (
       <div
         className={cn(
-          'flex w-full h-full',
+          'flex w-full h-full items-center',
           isHorizontal ? 'flex-row' : 'flex-col',
           className
         )}

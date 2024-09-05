@@ -40,7 +40,7 @@ export const NavToolbarMenu = ({
       <NavigationMenuTrigger
         className={cn(
           navigationMenuTriggerStyle(),
-          'text-xl font-semibold',
+          'text-lg font-semibold',
           floating && 'bg-transparent text-white'
         )}
       >

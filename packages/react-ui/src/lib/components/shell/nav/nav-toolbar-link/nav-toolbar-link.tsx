@@ -19,7 +19,7 @@ export const NavToolbarLink = ({
       <NavigationMenuLink
         className={cn(
           navigationMenuTriggerStyle(),
-          'text-xl font-semibold bg-transparent text-foreground',
+          'text-lg font-semibold bg-transparent text-foreground',
           floating && ' text-white'
         )}
         onSelect={() => onLinkTo(href)}

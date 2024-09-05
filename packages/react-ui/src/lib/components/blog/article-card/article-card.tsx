@@ -19,6 +19,7 @@ interface IPostCardProps extends IMdxDocMeta {
 export const ArticleCard = ({
   slug,
   coverImage,
+  authorName,
   authorAvatar,
   date,
   title,
@@ -29,12 +30,14 @@ export const ArticleCard = ({
 }: IPostCardProps) => {
   return (
     <Card
-      className={cn('max-w-2xl mx-auto cursor-pointer rounded', className)} // Use className prop
+      className={cn('max-w-2xl mx-auto cursor-pointer rounded-lg', className)} // Use className prop
       onClick={() => onClick(slug)}
     >
       <CardContent className={cn('m-0 p-0')}>
         <img
-          className={cn('object-cover object-center rounded-t w-full h-60')}
+          className={cn(
+            'object-cover object-center rounded-t w-full h-[420px] rounded-lg'
+          )}
           alt="article coverimage"
           src={coverImage}
         />
@@ -43,7 +46,8 @@ export const ArticleCard = ({
         {tags?.length && (
           <Tags tags={tags} className="hidden md:flex gap-3 mb-3" />
         )}
-        <div className="flex gap-3 items-center">
+        <CardTitle>{title}</CardTitle>
+        <div className="flex gap-3 pt-1">
           {authorAvatar && (
             <div>
               <Avatar>
@@ -51,10 +55,10 @@ export const ArticleCard = ({
               </Avatar>
             </div>
           )}
-          <div>
-            <CardTitle>{title}</CardTitle>
-            <p className="mt-2 text-xs">{date}</p>
-          </div>
+          <p className="mt-2 text-sm">
+            {authorName} | {date}
+          </p>
+          <div></div>
         </div>
         <CardDescription className={cn('!mt-3')}>{subtitle}</CardDescription>
       </CardHeader>
