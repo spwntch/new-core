@@ -1,6 +1,6 @@
 import { ArrowBigLeft } from 'lucide-react';
 // import { ImageContentSection } from '../../components';
-import { Button } from '../../shadcn-ui';
+import { Avatar, AvatarImage, Button } from '../../shadcn-ui';
 import { IMdxDocMeta } from '../../../types';
 import { cn } from '../../../utils';
 import { FullImageHero } from '../../brochureware';
@@ -20,7 +20,8 @@ export const ArticleHeader = ({
   hAlign = 'center',
   vAlign = 'middle',
 }: IArticleHeaderProps) => {
-  const { title, subtitle, coverImage, tags } = meta;
+  const { title, subtitle, coverImage, tags, authorAvatar, authorName, date } =
+    meta;
   return (
     <div className={cn('pb-4')}>
       {backTo && onBackTo && (
@@ -41,12 +42,22 @@ export const ArticleHeader = ({
             subheading: subtitle && { content: subtitle },
             tags: tags,
           }}
-          className="text-white h-[320px]"
+          className="text-white h-[480px]"
           hAlign={hAlign}
           vAlign={vAlign}
           height="640px"
         />
       )}
+      <div className="mt-8 flex gap-4 items-center">
+        {authorAvatar && (
+          <Avatar>
+            <AvatarImage src={authorAvatar}></AvatarImage>
+          </Avatar>
+        )}
+        <p className="text-sm">
+          {authorName} | {date}
+        </p>
+      </div>
     </div>
   );
 };
