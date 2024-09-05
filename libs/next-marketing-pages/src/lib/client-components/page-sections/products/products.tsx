@@ -47,11 +47,11 @@ export const Products = ({ content, className }: ProductsProps) => {
                   <div className="flex">
                     <div className="flex-1">
                       <CardTitle>{product.heading}</CardTitle>
-                      <CardDescription>{product.subheading}</CardDescription>
+                      <CardDescription className='mt-3 text-3xl'>{product.subheading}</CardDescription>
                     </div>
                     {idx === 0 && (
                       <Button
-                        size="lg"
+                        size="xl"
                         onClick={() => router.push(product.href || '')}
                       >
                         SHOP NOW
