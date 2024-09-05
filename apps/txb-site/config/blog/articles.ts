@@ -132,9 +132,9 @@ const PREDICTING_SUCCESS: IMdxDoc = {
 
 const THE_AI_ADVANTAGE: IMdxDoc = {
   meta: {
-    slug: 'ai-advantage-redefining-icp',
+    slug: 'the-ai-advantage',
     date: '2024-07-14',
-    coverImage: '/images/articles/ai-advantage-redefining-icp.webp',
+    coverImage: '/images/articles/the-ai-advantage.webp',
     authorName: 'Candice Malcolm',
     authorAvatar: '/images/authors/candice-ai-avatar.webp',
     title: 'The AI Advantage: Redefining Ideal Customer Profiles for Enhanced User Experience',
