@@ -51,7 +51,7 @@ export const HERO_CONTENT: IContent = {
       //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',
     },
     {
-      label: 'TRY FOR FREE',
+      label: 'TRY FREE',
       variant: { size: 'xl', variant: 'link' },
       //   url: '/start',
       //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',

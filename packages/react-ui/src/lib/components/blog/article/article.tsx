@@ -42,16 +42,16 @@ export const Article = ({
             onToc={onToc}
           />
         </div>
-        <div className="max-w-lg">
+        <div className="max-w-md">
           {toc?.length && (
             <div className='hidden lg:block'>
               <HeaderSubheading text="On This Page" className="mt-16 mb-12" />
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 ">
                 {toc.map((item, idx) => (
                   <a
                     href={item.href}
                     key={idx}
-                    className=" border-l-8 pl-4 hover:bg-muted py-2 font-semibold"
+                    className=" border-l-8 pl-4 hover:bg-muted py-2 font-semibold text-sm truncate max-w-sm"
                   >
                     {item.label}
                   </a>

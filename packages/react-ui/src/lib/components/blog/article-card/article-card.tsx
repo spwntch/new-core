@@ -36,7 +36,7 @@ export const ArticleCard = ({
       <CardContent className={cn('m-0 p-0')}>
         <img
           className={cn(
-            'object-cover object-center rounded-t w-full h-[420px] rounded-lg'
+            'object-cover object-center rounded-t w-full h-80 rounded-lg'
           )}
           alt="article coverimage"
           src={coverImage}
