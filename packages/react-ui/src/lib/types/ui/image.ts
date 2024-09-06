@@ -23,5 +23,6 @@ export interface IImage {
   darken?: '25%' | '50%' | '75%';
   attribution?: IImageAttribution;
   coverage?: ImageCoverage;
+  href?: string;
 }
 // Photo by Valentin Antonucci: https://www.pexels.com/photo/person-holding-compass-691637/

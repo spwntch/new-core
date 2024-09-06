@@ -29,6 +29,11 @@ const AI_AND_UX_SYNERGY: IMdxDoc = {
       'Emotional Design',
       'Customer Satisfaction'
     ],
+    ads: [
+      {src: '/images/products/icp-generator/icp-generator-web-ad.webp', alt: 'AI Powered ICP Generator', href:'/products/icp-generator'},
+      {src: '/images/products/bx-generator/bx-generator-web-ad.webp', alt: 'AI Powered Brand Strategy Map Generator', href:'/products/bx-generator'},
+      {src: '/images/products/journey-generator/journey-generator-web-ad.webp', alt: 'AI Powered Journey Map Generator', href:'/products/journey-generator'}
+    ],
   },
 };
 
@@ -63,6 +68,11 @@ const FROM_DATA_TO_DELIGHT: IMdxDoc = {
       'Data Privacy',
       'Ethical AI'
     ],
+    ads: [
+      {src: '/images/products/icp-generator/icp-generator-web-ad.webp', alt: 'AI Powered ICP Generator', href:'/products/icp-generator'},
+      {src: '/images/products/bx-generator/bx-generator-web-ad.webp', alt: 'AI Powered Brand Strategy Map Generator', href:'/products/bx-generator'},
+      {src: '/images/products/journey-generator/journey-generator-web-ad.webp', alt: 'AI Powered Journey Map Generator', href:'/products/journey-generator'}
+    ],
   },
 };
 
@@ -94,6 +104,11 @@ const PRECISION_TARGETING: IMdxDoc = {
       'Data Privacy',
       'Ethical AI',
       'Human-Centered AI'
+    ],
+    ads: [
+      {src: '/images/products/icp-generator/icp-generator-web-ad.webp', alt: 'AI Powered ICP Generator', href:'/products/icp-generator'},
+      {src: '/images/products/bx-generator/bx-generator-web-ad.webp', alt: 'AI Powered Brand Strategy Map Generator', href:'/products/bx-generator'},
+      {src: '/images/products/journey-generator/journey-generator-web-ad.webp', alt: 'AI Powered Journey Map Generator', href:'/products/journey-generator'}
     ],
   },
 };
@@ -127,6 +142,11 @@ const PREDICTING_SUCCESS: IMdxDoc = {
       'Real-Time Data Processing',
       'Continuous Learning'
     ],
+    ads: [
+      {src: '/images/products/icp-generator/icp-generator-web-ad.webp', alt: 'AI Powered ICP Generator', href:'/products/icp-generator'},
+      {src: '/images/products/bx-generator/bx-generator-web-ad.webp', alt: 'AI Powered Brand Strategy Map Generator', href:'/products/bx-generator'},
+      {src: '/images/products/journey-generator/journey-generator-web-ad.webp', alt: 'AI Powered Journey Map Generator', href:'/products/journey-generator'}
+    ],
   },
 };
 
@@ -158,6 +178,11 @@ const THE_AI_ADVANTAGE: IMdxDoc = {
       'Proactive Customer Service',
       'AI in Marketing',
       'Customer Loyalty'
+    ],
+    ads: [
+      {src: '/images/products/icp-generator/icp-generator-web-ad.webp', alt: 'AI Powered ICP Generator', href:'/products/icp-generator'},
+      {src: '/images/products/bx-generator/bx-generator-web-ad.webp', alt: 'AI Powered Brand Strategy Map Generator', href:'/products/bx-generator'},
+      {src: '/images/products/journey-generator/journey-generator-web-ad.webp', alt: 'AI Powered Journey Map Generator', href:'/products/journey-generator'}
     ],
   },
 };
@@ -191,6 +216,11 @@ const THE_REAL_REASON_YOU_NEED_AN_ICP: IMdxDoc = {
       'B2C marketing',
       'business growth',
       'competitive advantage'
+    ],
+    ads: [
+      {src: '/images/products/icp-generator/icp-generator-web-ad.webp', alt: 'AI Powered ICP Generator', href:'/products/icp-generator'},
+      {src: '/images/products/bx-generator/bx-generator-web-ad.webp', alt: 'AI Powered Brand Strategy Map Generator', href:'/products/bx-generator'},
+      {src: '/images/products/journey-generator/journey-generator-web-ad.webp', alt: 'AI Powered Journey Map Generator', href:'/products/journey-generator'}
     ],
   },
 };

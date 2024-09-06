@@ -1,4 +1,5 @@
 import { JSXElementConstructor, ReactElement } from 'react';
+import { IImage } from '../ui/image';
 
 export interface ITocItem {
   label: string;
@@ -26,6 +27,7 @@ export interface IMdxDocFrontMatter {
   categories?: string[];
   keywords?: string[];
   abstract?: string[];
+  ads?: IImage[]
   testimonial?: string;
   published?: boolean;
 }

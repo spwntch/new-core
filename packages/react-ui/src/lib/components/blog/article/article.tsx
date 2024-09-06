@@ -44,7 +44,7 @@ export const Article = ({
         </div>
         <div className="max-w-md">
           {toc?.length && (
-            <div className='hidden lg:block'>
+            <div className="hidden lg:block">
               <HeaderSubheading text="On This Page" className="mt-16 mb-12" />
               <div className="flex flex-col gap-4 ">
                 {toc.map((item, idx) => (
@@ -59,27 +59,22 @@ export const Article = ({
               </div>
             </div>
           )}
-          <HeaderSubheading text="Just For You" className="mt-16 mb-12" />
-          <div className="flex flex-col gap-16">
-            <a href="/" target="_blank">
-              <img
-                className={cn('object-contain object-center rounded')}
-                alt="article coverimage"
-                src="/images/ads/journey-mapping-web-ad.webp"
-              />
-            </a>
-            <a
-              href="https://icp-playbook.interactrdt.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className={cn('object-contain object-center rounded')}
-                alt="article coverimage"
-                src="/images/ads/icp-playbook-web-ad.webp"
-              />
-            </a>
-          </div>
+          {meta.ads && (
+            <>
+              <HeaderSubheading text="Just For You" className="mt-16 mb-12" />
+              <div className="flex flex-col gap-16">
+                {meta.ads.map((ad, idx) => (
+                  <a key={idx} href={ad.href || '/'} target="_blank" rel="noreferrer">
+                    <img
+                      className={cn('object-contain object-center rounded')}
+                      alt={ad.alt || 'WebAdvert'}
+                      src={ad.src}
+                    />
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
