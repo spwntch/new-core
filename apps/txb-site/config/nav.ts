@@ -10,10 +10,22 @@ export const NAV: INavItem[] = [
     label: 'Products',
     children: [
       {
-        label: 'AI Apowered ICP Generator',
+        label: 'AI Powered ICP Generator',
         description:
           'Create precise customer profiles instantly with our custom AI models.',
         href: '/products/icp-generator',
+      },
+      {
+        label: 'AI Powered Journey Map Generator',
+        description:
+        'Create rich customer journey maps instantly with our custom AI models.',
+        href: '/products/journey-generator',
+      },
+      {
+        label: 'AI Powered Brand Strat Generator',
+        description:
+          'Create a detailed brand strategy instantly with our custom AI models.',
+        href: '/products/bx-generator',
       },
     ],
   },

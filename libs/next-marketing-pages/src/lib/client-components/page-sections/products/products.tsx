@@ -70,8 +70,10 @@ export const Products = ({ content, className }: ProductsProps) => {
                 </CardHeader>
                 {idx === 0 && (
                   <CardContent className="flex flex-col gap-2 text-xs">
-                    {product.body.map((para) => (
-                      <div className="">{para}</div>
+                    {product.body.map((para, idx) => (
+                      <div className="" key={idx}>
+                        {para}
+                      </div>
                     ))}
                   </CardContent>
                 )}

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface INavMenu {
   label: string;
   onSelect?: (event: Event) => void;
@@ -6,6 +8,7 @@ export interface INavMenu {
 
 export interface INavLink {
   label: string;
+  icon?: ReactNode
   description?: string;
   href: string;
   active?: boolean;
