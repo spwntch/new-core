@@ -36,7 +36,7 @@ export const ArticleCard = ({
       <CardContent className={cn('m-0 p-0')}>
         <img
           className={cn(
-            'object-cover object-center rounded-t w-full h-80 rounded-lg'
+            'object-cover object-center rounded-t w-full max-h-80 rounded-lg brightness-75'
           )}
           alt="article coverimage"
           src={coverImage}
@@ -44,9 +44,9 @@ export const ArticleCard = ({
       </CardContent>
       <CardHeader>
         {tags?.length && (
-          <Tags tags={tags} className="hidden md:flex gap-3 mb-3" />
+          <Tags tags={tags} className="hidden md:flex gap-3 mb-3 " />
         )}
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className='leading-8'>{title}</CardTitle>
         <div className="flex gap-3 pt-1">
           {authorAvatar && (
             <div>

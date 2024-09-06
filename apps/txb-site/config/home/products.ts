@@ -35,7 +35,7 @@ export const PRODUCTS: IContent = {
       comingSoon: true,
       image: { src: '/images/products/bx-generator/bx-generator-hero-image.webp' },
       heading: 'AI Powered Brand Strategy Generator',
-      subheading: 'Coming Soon',
+      // subheading: 'Coming Soon',
       body: [
         'Gain a comprehensive view of your brand’s customer journey with the Brand Experience Map.',
         'This innovative tool allows you to visualize customer interactions across touchpoints and identify opportunities to enhance the overall brand experience.',
@@ -44,7 +44,7 @@ export const PRODUCTS: IContent = {
     {
       comingSoon: true,
       heading: 'AI Powered Journey Map Generator',
-      subheading: 'Coming Soon',
+      // subheading: 'Coming Soon',
       body: [
         "Understand your customers' interactions with your brand at every touchpoint with the Customer Journey Map Generator.",
         'This powerful tool enables you to map out the customer journey, identify pain points, and optimize the overall experience to drive customer satisfaction and loyalty.',

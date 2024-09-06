@@ -8,16 +8,16 @@ interface Props {
 }
 
 export const ArticleGrid = ({
-  articles: posts,
+  articles,
   onClickArticle,
 }: Props) => {
-  if (!posts?.length) return <div>no posts</div>;
+  if (!articles?.length) return <div>no articles</div>;
   return (
     <div className={cn("px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8")}>
-      {posts.map((post, index) => (
+      {articles.map((article, index) => (
         <ArticleCard
           key={index}
-          {...post.meta}
+          {...article.meta}
           onClick={onClickArticle}
           className="w-full"
         />

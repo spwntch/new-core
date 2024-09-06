@@ -32,22 +32,31 @@ export const Products = ({ content, className }: ProductsProps) => {
       <div className="md:container px-3 h-full">
         <ContentContainer innerContent={header} className="mb-12" />
         <MultiPanelLayout
-          mainPaneCoverage={70}
+          mainPaneCoverage={69}
           containers={
             products.map((product, idx) => (
-              <Card className="w-full m-3" key={idx}>
-                {/* <CardContent> */}
+              <Card className="w-full m-3 relative overflow-hidden" key={idx}>
+                {/* <div className="relative overflow-hidden w-56 h-56 bg-white border"> */}
+                {!product.subheading && (
+                  <div className="absolute right-0 top-0 h-16 w-16">
+                    <div className="absolute transform rotate-45 bg-accent text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px]">
+                      Coming Soon
+                    </div>
+                  </div>
+                )}
+                {/* </div> */}
                 <img
                   src={product.image?.src || ''}
                   alt={product.heading}
                   className="rounded-t-lg"
                 />
-                {/* </CardContent> */}
                 <CardHeader>
                   <div className="flex">
                     <div className="flex-1">
                       <CardTitle>{product.heading}</CardTitle>
-                      <CardDescription className='mt-3 '>{product.subheading}</CardDescription>
+                      <CardDescription className="mt-3 ">
+                        {product.subheading}
+                      </CardDescription>
                     </div>
                     {idx === 0 && (
                       <Button

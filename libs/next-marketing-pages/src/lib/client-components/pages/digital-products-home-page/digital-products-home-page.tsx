@@ -64,6 +64,7 @@ export const DigitalProductsHomePage = ({
       {about && <About id="about" {...about} className="bg-muted" />}
       {blog && (
         <Blog
+          displayStyle="carousel"
           content={blog.content}
           articles={blog.articles}
           className="bg-muted"

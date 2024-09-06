@@ -2,6 +2,7 @@
 
 import {
   ArticleGrid,
+  ArticleCarousel,
   cn,
   ContentContainer,
   IContent,
@@ -10,13 +11,14 @@ import {
 import { useRouter } from 'next/navigation';
 
 export interface BlogProps {
+  displayStyle?:'grid' | 'carousel';
   content?: IContent;
   articles: IMdxDoc[];
   path?: string;
   className?: string;
 }
 
-export const Blog = ({ content, articles, path, className }: BlogProps) => {
+export const Blog = ({displayStyle = 'grid', content, articles, path, className }: BlogProps) => {
   const router = useRouter();
   const header: IContent = {
     heading: content?.heading,
@@ -27,10 +29,14 @@ export const Blog = ({ content, articles, path, className }: BlogProps) => {
     <div className={cn('flex-col pt-12 pb-28', className)}>
       <div className="px-3">
         {content && <ContentContainer innerContent={header} />}
-        <ArticleGrid
+        {displayStyle=== 'carousel' && <ArticleCarousel
           articles={articles}
           onClickArticle={(slug) => router.push(`/${path || 'blog'}/${slug}`)}
-        />
+        />}
+        {displayStyle=== 'grid' && <ArticleGrid
+          articles={articles}
+          onClickArticle={(slug) => router.push(`/${path || 'blog'}/${slug}`)}
+        />}
       </div>
     </div>
   );
