@@ -1,7 +1,7 @@
 import { IContent, IImage } from '@spwntch/react-ui';
 
 export const ABOUT_HERO_IMAGE: IImage = {
-  src: '/images/about/about-hero.webp',
+  src: '/images/about/about-hero-image.webp',
   darken: '50%',
 };
 
