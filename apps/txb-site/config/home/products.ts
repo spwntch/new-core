@@ -2,7 +2,7 @@ import { IContent } from '@spwntch/react-ui';
 
 export const PRODUCTS: IContent = {
   heading: {
-    content: 'Explore Our Innovative Products',
+    content: 'The Future of Product is Now',
     className: 'text-3xl font-bold mb-4 text-center',
   },
   subheading: {
