@@ -2,27 +2,27 @@ import { DigitalProductLandingPage } from '@/next-marketing-pages';
 import {
   BENEFITS,
   FAQ,
-  FEATURES,
   HERO_CONTENT,
-  HERO_IMAGE,
-  PAIN_POINTS
+  HERO_IMAGE
 } from '../../../config/products/journey-generator';
 
-const title = 'AI Powered ICP Generator | Generate Ideal Customer Profiles with AI';
+const title = 'AI Powered Journey Map Generator | Automate Customer Journey Mapping with AI';
 const description =
-  'Instantly create accurate Ideal Customer Profiles and Buyer Personas with our AI Powered ICP Generator. Tailor your product and marketing strategies to your ideal customers with data-driven insights. Enhance targeting, reduce risk, and accelerate time-to-market. Start refining your customer strategy today!';
-const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/products/icp-generator/icp-generator-hero-imapge.png`;
+  'Automatically generate comprehensive customer journey maps for B2B and B2C markets with the AI Powered Journey Map Generator. Leverage AI-driven insights to optimize every touchpoint and enhance your customer experience strategy. Achieve faster time-to-market, increased flexibility, and data-driven optimization for superior results.';
+const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/products/journey-generator/journey-hero-image.png`;
 const keywords: string[] = [
-  'AI Powered ICP Generator',
-  'Ideal Customer Profile',
-  'Buyer Persona',
-  'customer targeting',
-  'data-driven marketing',
+  'AI Powered Journey Map Generator',
+  'Customer Journey Mapping',
+  'B2B Journey Maps',
+  'B2C Journey Maps',
+  'customer experience',
+  'AI customer insights',
+  'data-driven journey optimization',
+  'customer touchpoints',
   'product strategy',
-  'market validation',
-  'customer insights',
   'B2B marketing',
   'B2C marketing',
+  'AI journey mapping',
 ];
 
 export const metadata = {
