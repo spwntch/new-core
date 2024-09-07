@@ -2,7 +2,7 @@ import { IContent, IImage } from '@spwntch/react-ui';
 import { Rocket, ShieldCheck, Target } from 'lucide-react';
 
 export const HERO_IMAGE: IImage = {
-  src: '/images/products/journey-generator/journey-generator-hero-image.webp',
+  src: '/images/products/journey-generator/journey-generator-hero-image-new.webp',
   darken: '75%',
 };
 

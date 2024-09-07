@@ -32,8 +32,9 @@ export const PRODUCTS: IContent = {
       ],
     },
     {
+      href: '/products/bx-generator',
       comingSoon: true,
-      image: { src: '/images/products/bx-generator/bx-generator-hero-image.webp' },
+      image: { src: '/images/products/bx-generator/bx-generator-hero-image-new.webp' },
       heading: 'AI Powered Brand Strategy Generator',
       // subheading: 'Coming Soon',
       body: [
@@ -50,7 +51,7 @@ export const PRODUCTS: IContent = {
         'This powerful tool enables you to map out the customer journey, identify pain points, and optimize the overall experience to drive customer satisfaction and loyalty.',
       ],
       image: {
-        src: '/images/products/journey-generator/journey-generator-hero-image.webp',
+        src: '/images/products/journey-generator/journey-generator-hero-image-new.webp',
       },
     },
   ],

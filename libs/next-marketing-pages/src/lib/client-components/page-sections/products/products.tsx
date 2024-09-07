@@ -58,12 +58,12 @@ export const Products = ({ content, className }: ProductsProps) => {
                         {product.subheading}
                       </CardDescription>
                     </div>
-                    {idx === 0 && (
+                    { (
                       <Button
                         size="lg"
                         onClick={() => router.push(product.href || '')}
                       >
-                        SHOP NOW
+                        {product.subheading && 'SHOP NOW' || 'LEARN MORE'}
                       </Button>
                     )}
                   </div>
