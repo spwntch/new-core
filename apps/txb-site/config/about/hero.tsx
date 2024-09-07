@@ -7,18 +7,20 @@ export const ABOUT_HERO_IMAGE: IImage = {
 
 export const ABOUT_HERO_CONTENT: IContent = {
   title: {
-    content: 'Welcome to The Experience Business',
-    className: 'max-w-5xl'
+    content: "Welcome to The Experience Business",
   },
   subheading: {
-    content: 'Innovating Customer Experiences through AI and Technology',
-    className: 'max-w-lg mx-auto'
+    content: "Innovating Customer Experiences through AI and Technology",
   },
   body: {
     content: [
-      'At The Experience Business (TXB), we leverage cutting-edge technology and artificial intelligence to make advanced UX, lean product development, and insights management accessible to businesses of all sizes. Our mission is to transform how companies engage with their customers, driving innovation and delivering tangible results.',
-      'Join us on a journey to elevate your business with strategies that are as intelligent as they are impactful, ensuring that every customer interaction is a step towards lasting success.',
+      "At The Experience Business (TXB), we leverage cutting-edge technology and artificial intelligence to redefine customer and user experiences. From advanced UX design to lean product development and actionable insights management, we make enterprise-level solutions accessible to businesses of all sizes. Our mission is to transform how companies engage with their customers—driving innovation, elevating brand experiences, and delivering measurable results.",
+      "Join us on a journey to elevate your business. With strategies powered by AI, we ensure that every customer interaction is intelligent, impactful, and a step towards lasting success."
     ],
-    className: 'max-w-3xl text-center mx-auto',
   },
+  ctas: [
+    {
+      label: "REACH OUT"
+    },
+  ],
 };
