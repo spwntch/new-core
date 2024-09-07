@@ -10,6 +10,7 @@ export interface IFullImageHeroProps extends HTMLAttributes<HTMLDivElement> {
   navbarHeight?: number;
   image: IImage;
   innerContent: IContent;
+  ribbon?: string
   height?: string;
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
@@ -23,6 +24,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
       navbarHeight,
       image,
       innerContent,
+      ribbon,
       height,
       hAlign,
       vAlign,
@@ -36,7 +38,7 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
     return (
       <div
         className={cn(
-          'w-full sm:h-fit isolate relative',
+          'w-full sm:h-fit isolate relative overflow-hidden',
           height
             ? `h-[${height}] md:h-[${height}]`
             : navbarHeight
@@ -47,6 +49,11 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
         ref={ref}
         {...props}
       >
+        {ribbon&&<div className="absolute right-0 top-0 h-24 w-24">
+          <div className="absolute transform rotate-45 bg-accent text-center text-white text-2xl font-semibold py-1 right-[-80px] top-[100px] w-[400px]">
+            {ribbon}
+          </div>
+        </div>}
         <ImageContainer image={image}>
           <ContentContainer
             innerContent={innerContent}

@@ -14,7 +14,7 @@ export const HERO_CONTENT: IContent = {
   subheading: {
     content:
       'Instantly generate Ideal Customer Profiles and Buyer Personas to refine your strategy, target the right customers, and drive growth with precision.',
-      className: 'max-w-5xl',
+    className: 'max-w-5xl',
   },
   body: {
     content: [
@@ -25,19 +25,19 @@ export const HERO_CONTENT: IContent = {
   },
   bullets: [
     {
-      icon: <Rocket className="h-6 w-6 text-primary" />,
+      icon: <Rocket className="h-6 w-6 " />,
       body: [
         'Instant access to accurate customer profiles for faster decision-making.',
       ],
     },
     {
-      icon: <Target className="h-6 w-6 text-primary" />,
+      icon: <Target className="h-6 w-6 " />,
       body: [
         'Target your audience with data-driven insights tailored to their needs.',
       ],
     },
     {
-      icon: <ShieldCheck className="h-6 w-6 text-primary" />,
+      icon: <ShieldCheck className="h-6 w-6 " />,
       body: [
         'Unify your team’s efforts around a single, well-defined target customer.',
       ],

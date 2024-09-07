@@ -1,0 +1,5 @@
+export * from './hero'
+export * from './pain-ponts'
+export * from './benefits'
+export * from './features'
+export * from './faq'

@@ -5,9 +5,8 @@ import {
   FEATURES,
   HERO_CONTENT,
   HERO_IMAGE,
-  PAIN_POINTS,
-  POST_BENEFITS_CTA_BANNER,
-} from '../../../config/products';
+  PAIN_POINTS
+} from '../../../config/products/journey-generator';
 
 const title = 'AI Powered ICP Generator | Generate Ideal Customer Profiles with AI';
 const description =
@@ -55,11 +54,11 @@ export const metadata = {
 export default function Index() {
   return (
     <DigitalProductLandingPage
-      hero={{ image: HERO_IMAGE, content: HERO_CONTENT }}
-      painPoints={PAIN_POINTS}
+      hero={{ image: HERO_IMAGE, content: HERO_CONTENT, ribbon:'Launching Q4, 2024' }}
+      // painPoints={PAIN_POINTS}
       benefits={BENEFITS}
-      features={FEATURES}
-      ctaBanner={POST_BENEFITS_CTA_BANNER}
+      // features={FEATURES}
+      // ctaBanner={POST_BENEFITS_CTA_BANNER}
       faqs={FAQ}
     />
   );

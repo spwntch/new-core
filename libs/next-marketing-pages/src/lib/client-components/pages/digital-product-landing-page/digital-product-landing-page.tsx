@@ -7,6 +7,7 @@ export interface DigitalProductLandingPageProps {
   hero: {
     image: IImage;
     content: IContent;
+    ribbon?: string;
   };
   // clientLogos?: string[];
   painPoints?: IContent;
@@ -51,6 +52,7 @@ export const DigitalProductLandingPage = ({
       <FullImageHero
         image={hero.image}
         innerContent={hero.content}
+        ribbon={hero.ribbon}
         className="text-white"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
