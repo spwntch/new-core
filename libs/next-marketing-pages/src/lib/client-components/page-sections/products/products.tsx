@@ -54,7 +54,7 @@ export const Products = ({ content, className }: ProductsProps) => {
                   <div className="flex">
                     <div className="flex-1">
                       <CardTitle>{product.heading}</CardTitle>
-                      <CardDescription className="mt-3 ">
+                      <CardDescription className="mt-3 text-4xl font-semibold">
                         {product.subheading}
                       </CardDescription>
                     </div>

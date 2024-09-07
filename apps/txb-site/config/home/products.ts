@@ -43,6 +43,7 @@ export const PRODUCTS: IContent = {
       ],
     },
     {
+      href: '/products/journey-generator',
       comingSoon: true,
       heading: 'AI Powered Journey Map Generator',
       // subheading: 'Coming Soon',
