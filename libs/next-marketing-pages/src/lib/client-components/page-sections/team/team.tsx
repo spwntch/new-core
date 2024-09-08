@@ -1,5 +1,4 @@
-import { cn, ContentContainer, IContent } from '@spwntch/react-ui';
-import React from 'react';
+import { cn, ContentContainer, IContent, LargeAvatarGrid } from '@spwntch/react-ui';
 
 type TeamProps = {
   id: string;
@@ -17,6 +16,7 @@ export const Team = ({ id, content, className }: TeamProps) => {
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="md:container px-3">
         <ContentContainer innerContent={header} />
+        <LargeAvatarGrid avatars={content.bullets} />
       </div>
     </div>
   );

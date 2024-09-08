@@ -2,34 +2,22 @@ import { IContent } from '@spwntch/react-ui';
 
 export const TEAM: IContent = {
   heading: {
-    content: 'Meet Our Team',
-    className: 'text-4xl font-bold  text-center',
+    content: 'Meet Our Leadership',
+    className: 'text-4xl',
   },
   subheading: {
     content:
       'We’re a dynamic group of individuals who are passionate about what we do.',
-    className: 'text-lg text-gray-300 text-center mb-6',
+    className: 'max-w-2xl',
   },
   bullets: [
-    {
-      image: { src: '/images/team/dave-benjamin.webp', alt: 'Dave Benjamin' }, // Replace with actual image paths
-      heading: 'Dave Benjamin',
-      subheading: 'Founder & CEO',
-      body: [],
-      bullets: [
-        // {
-        //   icon: <LinkedinIcon />,
-        //   href: "https://www.linkedin.com/in/dave-benjamin",
-        // },
-      ],
-    },
     {
       image: {
         src: '/images/team/gary-greenfield.webp',
         alt: 'Gary Greenfield',
       },
       heading: 'Gary Greenfield',
-      subheading: 'Co-Founder & Managing Director',
+      subheading: 'CEO / COO',
       body: [],
       //   bullets: [
       //     {
@@ -37,6 +25,18 @@ export const TEAM: IContent = {
       //       href: "https://www.linkedin.com/in/gary-greenfield",
       //     },
       //   ],
+    },
+    {
+      image: { src: '/images/team/dave-benjamin.webp', alt: 'Dave Benjamin' }, // Replace with actual image paths
+      heading: 'Dave Benjamin',
+      subheading: 'CTO / CMO',
+      body: [],
+      bullets: [
+        // {
+        //   icon: <LinkedinIcon />,
+        //   href: "https://www.linkedin.com/in/dave-benjamin",
+        // },
+      ],
     },
     {
       image: {

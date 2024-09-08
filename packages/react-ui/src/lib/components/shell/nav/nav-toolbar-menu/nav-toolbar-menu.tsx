@@ -1,6 +1,7 @@
 import { cn } from '../../../../utils';
 import { INavLink, INavMenu } from '../../../../types';
 import {
+  DropdownMenuSeparator,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuTrigger,
@@ -19,7 +20,7 @@ export const NavToolbarMenu = ({
   onLinkTo,
   children,
 }: ITopNavMenuProps) => {
-  const pickMenuItem = (item: INavMenu) => {
+  const pickMenuItem = (item: INavMenu, index: number) => {
     // ONLY IF WE HAVE SUBMENU...
     // FOR NOW, WE DON'T...
     // if ((item as INavMenu).children) {
@@ -27,11 +28,14 @@ export const NavToolbarMenu = ({
     // }
 
     return (
-      <NavToolbarMenuLink
-        key={(item as INavLink).href}
-        {...(item as INavLink)}
-        onLinkTo={onLinkTo}
-      />
+      <>
+        {index !== 0 && <DropdownMenuSeparator />}
+        <NavToolbarMenuLink
+          key={(item as INavLink).href}
+          {...(item as INavLink)}
+          onLinkTo={onLinkTo}
+        />
+      </>
     );
   };
 
@@ -48,7 +52,7 @@ export const NavToolbarMenu = ({
       </NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="flex flex-col w-[320px] gap-3 p-4">
-          {children?.map((item) => pickMenuItem(item))}
+          {children?.map((item, index) => pickMenuItem(item, index))}
         </ul>
       </NavigationMenuContent>
     </NavigationMenuItem>

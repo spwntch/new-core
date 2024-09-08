@@ -14,7 +14,7 @@ export const FeatureGridOne = ({
   return (
     <div
       className={cn(
-        'grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16',
+        'grid max-w-xl grid-cols-1 lg:gap-x-8 lg:gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16',
         className
       )}
     >
