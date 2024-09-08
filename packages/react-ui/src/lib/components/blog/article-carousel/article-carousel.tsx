@@ -30,14 +30,14 @@ export const ArticleCarousel = ({
           {articles.map((article, index) => (
             <CarouselItem
               key={index}
-              className="flex justify-center items-center basis-1/2   "
+              className="flex justify-center items-center basis-1/1 md:basis-1/2   "
             >
-              <div className="p-4 h-full w-full mx-2">
+              <div className="p-4 h-full w-full mx-0">
                 <ArticleCard
                   key={index}
                   {...article.meta}
                   onClick={onClickArticle}
-                  className="w-full h-full"
+                  className="w-80 md:w-full  h-full"
                 />
               </div>
             </CarouselItem>

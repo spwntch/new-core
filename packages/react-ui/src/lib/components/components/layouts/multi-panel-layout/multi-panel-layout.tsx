@@ -1,5 +1,6 @@
 import React, { forwardRef, ReactNode } from 'react';
 import { cn } from '../../../../utils';
+import { useMediaQuery } from '@react-hooks-library/core';
 
 export interface IMultiPanelLayoutProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -28,6 +29,7 @@ export const MultiPanelLayout = forwardRef<
     },
     ref
   ) => {
+    const isMd = useMediaQuery('(min-width: 768px)');
     const isHorizontal = orientation === 'horizontal';
 
     const mainBlockStyle: React.CSSProperties = isHorizontal
@@ -49,7 +51,7 @@ export const MultiPanelLayout = forwardRef<
     return (
       <div
         className={cn(
-          'flex w-full h-full items-center',
+          'flex flex-wrap md:flex-nowrap w-full h-full items-center',
           isHorizontal ? 'flex-row' : 'flex-col',
           className
         )}
@@ -58,7 +60,7 @@ export const MultiPanelLayout = forwardRef<
       >
         <div
           className="flex items-center justify-center h-full w-full"
-          style={mainBlockStyle}
+          style={!isMd ? { width: '100%', height: '100%' } : mainBlockStyle}
         >
           {containers ? containers[0] : 'Main Block'}
         </div>
