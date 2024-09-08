@@ -29,6 +29,29 @@ export const NAV: INavItem[] = [
       },
     ],
   },
+  {
+    label: 'Services',
+    children: [
+      {
+        label: 'ICP Exploration',
+        description:
+          'Dive really deep into the mind of your ideal customer profile. Understand their needs, wants, and desires.',
+        href: '/services/icp-exploration',
+      },
+      {
+        label: 'Go-To-Market Strategy',
+        description:
+          'Develop a comprehensive go-to-market strategy that aligns with your business goals.',
+        href: '/services/gtm-strategy',
+      },
+      {
+        label: 'UX Deep Dive',
+        description:
+          'Get a comprehensive assessment of your user experience to identify areas of improvement.',
+        href: '/services/ux-deep-dive',
+      },
+    ],
+  },
   // { label: 'Customer Success HQ', href: '/success' },
   { label: 'Blog', href: '/blog' },
   { label: 'Reach Out', href: '/contact' },
