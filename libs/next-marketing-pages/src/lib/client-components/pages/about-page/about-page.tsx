@@ -2,6 +2,7 @@
 import { FullImageHero, IContent, IImage } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 import { FeaturesGrid } from '../../page-sections';
+import Team from '../../page-sections/team/team';
 
 export interface AboutPageProps {
   hero: {
@@ -34,7 +35,7 @@ export const AboutPage = ({ hero, painPoints, team }: AboutPageProps) => {
       {painPoints && (
         <FeaturesGrid id="product" content={painPoints} gridStyle="two" />
       )}
-      {/* {team && <Team content={team} className="bg-muted" />} */}
+      {team && <Team id="team" content={team} className="bg-muted" />}
     </div>
   );
 };
