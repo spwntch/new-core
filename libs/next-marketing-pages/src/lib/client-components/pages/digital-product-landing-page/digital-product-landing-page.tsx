@@ -41,7 +41,7 @@ export const DigitalProductLandingPage = ({
   benefits,
   ctaBanner,
   features,
-  faqs
+  faqs,
 }: DigitalProductLandingPageProps) => {
   const router = useRouter();
   const handleLinkTo = (url: string) => {
@@ -67,13 +67,12 @@ export const DigitalProductLandingPage = ({
         <CtaBanner
           content={ctaBanner}
           onCtaClick={() => handleLinkTo('#cta-form')}
-          
         />
       )}
-      {features && <FeaturesGrid id="product" content={features} 
-      className="bg-muted"
-      />}
-       {faqs && <Faqs id="faq" content={faqs}  />}
+      {features && (
+        <FeaturesGrid id="product" content={features} className="bg-muted" />
+      )}
+      {faqs && <Faqs id="faq" content={faqs} />}
     </div>
   );
 };
