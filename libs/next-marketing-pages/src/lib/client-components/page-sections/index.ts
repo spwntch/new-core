@@ -9,3 +9,4 @@ export * from './features/features';
 export * from './how-it-works/how-it-works';
 export * from './pricing/pricing';
 export * from './products/products';
+// export * from './team/team';

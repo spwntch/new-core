@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import { Carousel, CarouselContent, CarouselItem } from '../../shadcn-ui';
-import { IMdxDoc } from '../../../types';
 import Autoplay from 'embla-carousel-autoplay';
-import { ArticleCard } from '../article-card/article-card';
+import { useRef } from 'react';
+import { IMdxDoc } from '../../../types';
 import { cn } from '../../../utils';
+import { Carousel, CarouselContent, CarouselItem } from '../../shadcn-ui';
+import { ArticleCard } from '../article-card/article-card';
 
 interface Props {
   articles: IMdxDoc[];
@@ -16,7 +16,7 @@ export const ArticleCarousel = ({
   onClickArticle,
   className,
 }: Props) => {
-  const plugin = useRef(Autoplay({ delay: 0, stopOnMouseEnter:true }));
+  const plugin = useRef(Autoplay({ delay: 0, stopOnMouseEnter: true }));
   if (!articles?.length) return null;
   const carouselOptions = { loop: true, duration: 10000 };
   return (

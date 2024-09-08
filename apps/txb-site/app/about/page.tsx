@@ -1,16 +1,17 @@
-import { DigitalProductLandingPage } from '@/next-marketing-pages';
+import { AboutPage } from '@/next-marketing-pages';
 import {
   ABOUT_HERO_CONTENT,
   ABOUT_HERO_IMAGE,
   PAIN_POINTS,
+  TEAM
 } from '../../config/about';
-import React from 'react';
 
 const About = () => {
   return (
-    <DigitalProductLandingPage
+    <AboutPage
       hero={{ image: ABOUT_HERO_IMAGE, content: ABOUT_HERO_CONTENT }}
       painPoints={PAIN_POINTS}
+      team={TEAM}
       // clientLogos={TECH_LOGOS}
       // products={{ content: PRODUCTS }}
       // blog={{
