@@ -56,7 +56,7 @@ export const DigitalProductLandingPage = ({
         className="text-white"
         hAlign="left"
         onCtaClick={(ctaIndex: number) => {
-          if (ctaIndex === 0) handleLinkTo('#cta-form');
+          handleLinkTo(hero.content.ctas?.[ctaIndex].href || '');
         }}
       />
       {painPoints && (
