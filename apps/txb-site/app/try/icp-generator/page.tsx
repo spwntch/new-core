@@ -5,23 +5,30 @@ const TryIcpGenerator = () => {
     {
       title: 'Product Resarch',
       description: `Let's get started by doing some product research. The more information you have about your product, the better.`,
+      form: <div>Step 1 Form</div>,
+      result: <div>Step 1 Result</div>,
     },
     {
       title: 'Generate ICP',
       description: 'Step 2 description',
+      form: <div>Step 2 Form</div>,
+      result: <div>Step 2 Result</div>,
     },
     {
       title: 'Generate Buyer Personas',
       description: 'Step 3 description',
+      form: <div>Step 3 Form</div>,
+      result: <div>Step 3 Result</div>,
     },
     {
       title: 'Review Target Customers',
       description: 'Step 3 description',
+      form: <div>Step 4 Form</div>,
+      result: <div>Step 4 Result</div>,
     },
-   
   ];
   return (
-    <div>
+    <div className='w-full'>
       <TryProductStepper steps={steps} />
     </div>
   );
