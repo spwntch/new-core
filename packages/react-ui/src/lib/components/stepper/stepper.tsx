@@ -18,10 +18,10 @@ export const Stepper = ({ steps, currentStep }: StepperProps) => {
               >
                 <div
                   className={cn(
-                    'rounded-full  h-12 w-12 flex items-center justify-center p-3 text-2xl',
-                    currentStep === index
-                      ? 'bg-foreground text-background'
-                      : 'border-foreground border-2'
+                    'rounded-full h-12 w-12 flex items-center justify-center p-3 text-2xl',
+                    index < currentStep && 'bg-muted text-muted-foreground',
+                    index === currentStep && 'bg-foreground text-background',
+                    index > currentStep && 'border-foreground border-2'
                   )}
                 >
                   {index + 1}
@@ -30,7 +30,7 @@ export const Stepper = ({ steps, currentStep }: StepperProps) => {
                   {step.title}
                 </div>
               </div>
-              
+
               {index < steps.length - 1 && (
                 <div className="border-t-2 w-full relative top-6"></div>
               )}
