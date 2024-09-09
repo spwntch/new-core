@@ -24,6 +24,7 @@ export const brand: IBrand = {
     ],
   },
   contact: {
+    address: '3 Sandown Valley Crescent, Sandton, Johannesburg, 2196, South Africa',
     website: 'www.theexperiencebusiness.com',
     mail: 'hello@theexperiencebusiness.com',
     phone: '+27 11 994 9960',

@@ -1,8 +1,8 @@
 'use client';
-import { CalDotCom } from '@/crm';
 // import { Calendly } from '@/crm';
 import { IContent, IImage, TwoColumnImageHero } from '@spwntch/react-ui';
-import { Map } from '../../page-sections';
+import { GoogleMap } from '../../page-sections';
+import { CalDotCom } from '@/crm';
 
 export interface ContactPageProps {
   hero: {
@@ -20,7 +20,7 @@ export const ContactPage = ({
 }: ContactPageProps) => {
   return (
     <div className="flex flex-col">
-      {/* <TwoColumnImageHero
+      <TwoColumnImageHero
         image={hero.image}
         innerContent={hero.content}
         hAlign="left"
@@ -30,8 +30,8 @@ export const ContactPage = ({
           <h2 className="text-3xl mb-3 font-semibold">Meet with Us</h2>
           <CalDotCom calendarUrl={calendarUrl} />
         </div>
-      </TwoColumnImageHero> */}
-      <Map
+      </TwoColumnImageHero>
+      <GoogleMap
         position={{
           lat: -26.102878317158115,
           lng: 28.050516039241906,
