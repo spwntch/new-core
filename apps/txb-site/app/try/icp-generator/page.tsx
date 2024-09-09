@@ -6,8 +6,7 @@ const TryIcpGenerator = () => {
     {
       title: 'Product Resarch',
       description: [
-        `Let's get started by doing some product research.`,
-        `The more information you have about your product, the better.`,
+        `Let's get started by doing some product research. The more information you have about your product, the better.`,
       ],
       form: <NewProductForm />,
     },
