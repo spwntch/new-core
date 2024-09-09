@@ -1,7 +1,7 @@
 import { cn } from '../../utils';
 
 type StepperProps = {
-  steps: { title: string; description: string }[];
+  steps: { title: string; description: string[] }[];
   currentStep: number;
 };
 
