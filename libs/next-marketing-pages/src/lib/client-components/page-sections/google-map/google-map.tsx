@@ -1,11 +1,10 @@
 'use client';
 import { Logo } from '@spwntch/react-ui';
 import {
-  APIProvider,
-  Map,
   AdvancedMarker,
-  Pin,
+  APIProvider,
   InfoWindow,
+  Map
 } from '@vis.gl/react-google-maps';
 import About from 'packages/react-ui/src/lib/components/shell/footer/sections/about/about';
 import Contact from 'packages/react-ui/src/lib/components/shell/footer/sections/contact/contact';
@@ -25,9 +24,7 @@ export const GoogleMap = ({ position }: Props) => {
           defaultCenter={position}
           mapId={process.env.NEXT_PUBLIC_GOOGLE_MAP_ID as string}
         >
-          <AdvancedMarker position={position} onClick={() => setShowInfo(true)}>
-            <Pin background="pink" />
-          </AdvancedMarker>
+          <AdvancedMarker position={position} onClick={() => setShowInfo(true)} />
           {showInfo && (
             <InfoWindow
               position={position}
