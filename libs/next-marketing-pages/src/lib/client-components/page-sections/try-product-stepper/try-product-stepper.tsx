@@ -1,6 +1,6 @@
 'use client';
 
-import { Stepper, StepperButtons } from '@spwntch/react-ui';
+import { Stepper } from '@spwntch/react-ui';
 import { ReactNode, useState } from 'react';
 
 type TryProductStepperProps = {
@@ -35,12 +35,12 @@ export const TryProductStepper = ({ steps }: TryProductStepperProps) => {
         <div className="w-full flex">
           <div className="py-4 w-full">{steps?.[currentStep]?.form}</div>
         </div>
-        <StepperButtons
+        {/* <StepperButtons
           totalSteps={steps.length}
           currentStep={currentStep}
           onBack={() => setCurrentStep((state) => state - 1)}
           onNext={() => setCurrentStep((state) => state + 1)}
-        />
+        /> */}
       </div>
     </div>
   );

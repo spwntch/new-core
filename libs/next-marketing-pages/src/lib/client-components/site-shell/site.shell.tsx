@@ -17,6 +17,7 @@ export interface INavBar {
 
 export interface SiteShellProps extends IShellProviderProps {
   navbar: INavBar;
+  hideShellPaths?: string[];
   underContruction?: boolean;
   githubUrl?: string;
 }
@@ -26,11 +27,12 @@ export const SiteShell = ({
   navItems,
   underContruction,
   navbar,
+  hideShellPaths,
   githubUrl,
   children,
 }: SiteShellProps & PropsWithChildren) => {
   const router = useRouter();
-  // const pathname = usePathname();
+  const pathname = usePathname();
   const handleLinkTo = (url: string) => {
     router.push(url);
   };
@@ -47,10 +49,10 @@ export const SiteShell = ({
         underContruction={underContruction}
         githubUrl={githubUrl}
         onNavbarLinkTo={handleLinkTo}
+        hideShell={hideShellPaths?.includes(pathname)}
       >
         {children}
       </SiteShellStarter>
     </ShellProvider>
   );
 };
-

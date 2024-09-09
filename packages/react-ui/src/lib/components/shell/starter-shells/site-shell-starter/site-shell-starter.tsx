@@ -11,21 +11,24 @@ export interface SiteShellProps {
     disableThemeToggle?: boolean;
     className?: string;
   };
-  underContruction?: boolean;
   githubUrl?: string;
+  hideShell?: boolean;
+  underContruction?: boolean;
   onNavbarLinkTo: (href: string) => void;
 }
 
 export const SiteShellStarter = ({
-  underContruction,
   navbar,
   githubUrl,
+  hideShell,
+  underContruction,
   onNavbarLinkTo,
   children,
 }: SiteShellProps & PropsWithChildren) => {
   return (
     <>
       <DesktopTopNavbar
+        hideToolbar={hideShell}
         floating={navbar.floating}
         className={cn(
           navbar.floating ? 'bg-transparent w-full' : 'bg-background',
@@ -41,7 +44,8 @@ export const SiteShellStarter = ({
       <main className={cn(navbar.floating && 'relative -top-[100px]')}>
         {children}
       </main>
-      {underContruction ? <UnderConstructionFooter /> : <RegularFooter />}
+      {!hideShell &&
+        (underContruction ? <UnderConstructionFooter /> : <RegularFooter />)}
     </>
   );
 };
