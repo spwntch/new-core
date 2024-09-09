@@ -47,7 +47,7 @@ const NewProductForm = () => {
         label: 'GET FREE PRODUCT RESEARCH',
       }}
       onSubmit={handleFormSubmit}
-      className="w-full"
+      className="mx-auto max-w-4xl"
     >
       <FormField
         control={form.control}
