@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BuyIcpGenerator = () => {
-  return <div>BuyIcpGenerator</div>;
+  return <div className='pt-32'>BuyIcpGenerator</div>;
 };
 
 export default BuyIcpGenerator;
