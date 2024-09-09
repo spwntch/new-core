@@ -8,6 +8,9 @@ dependencies:
   '@calcom/embed-react':
     specifier: ^1.5.0
     version: 1.5.0(react-dom@18.3.1)(react@18.3.1)
+  '@googlemaps/js-api-loader':
+    specifier: ^1.16.8
+    version: 1.16.8
   '@headlessui/react':
     specifier: ^2.1.2
     version: 2.1.2(react-dom@18.3.1)(react@18.3.1)
@@ -220,6 +223,9 @@ devDependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.13
     version: 0.5.13(tailwindcss@3.4.3)
+  '@types/google.maps':
+    specifier: ^3.58.0
+    version: 3.58.0
   '@types/jest':
     specifier: ^29.4.0
     version: 29.5.12
@@ -2164,6 +2170,10 @@ packages:
     resolution: {integrity: sha512-sTcG+QZ6fdEUObICavU+aB3Mp8HY4n14wYHdxK4fXjPmv3PXZZeY5RaguJmGyeH/CJQhX3fqKUtS4qc1LoHwhQ==}
     dev: false
 
+  /@googlemaps/js-api-loader@1.16.8:
+    resolution: {integrity: sha512-CROqqwfKotdO6EBjZO/gQGVTbeDps5V7Mt9+8+5Q+jTg5CRMi3Ii/L9PmV3USROrt2uWxtGzJHORmByxyo9pSQ==}
+    dev: false
+
   /@hapi/hoek@9.3.0:
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
     dev: true
@@ -3162,6 +3172,23 @@ packages:
       - verdaccio
     dev: true
 
+  /@nrwl/js@19.5.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.3)(typescript@5.4.5)(verdaccio@5.32.0):
+    resolution: {integrity: sha512-86qnph/V0uy1Qc5jO6z+MAdqW1kB1dOdKDTIAr0mauy23FMOmLUo5dr0UdG8HQKtF8k7ceEsycZdSlwXbC+ltQ==}
+    dependencies:
+      '@nx/js': 19.5.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.3)(typescript@5.4.5)(verdaccio@5.32.0)
+    transitivePeerDependencies:
+      - '@babel/traverse'
+      - '@swc-node/register'
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - debug
+      - nx
+      - supports-color
+      - typescript
+      - verdaccio
+    dev: true
+
   /@nrwl/js@19.5.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.3)(typescript@5.5.3)(verdaccio@5.32.0):
     resolution: {integrity: sha512-86qnph/V0uy1Qc5jO6z+MAdqW1kB1dOdKDTIAr0mauy23FMOmLUo5dr0UdG8HQKtF8k7ceEsycZdSlwXbC+ltQ==}
     dependencies:
@@ -3512,7 +3539,7 @@ packages:
       '@babel/preset-env': 7.25.0(@babel/core@7.24.9)
       '@babel/preset-typescript': 7.24.7(@babel/core@7.24.9)
       '@babel/runtime': 7.25.0
-      '@nrwl/js': 19.5.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.3)(typescript@5.5.3)(verdaccio@5.32.0)
+      '@nrwl/js': 19.5.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)(@types/node@18.16.9)(nx@19.5.3)(typescript@5.4.5)(verdaccio@5.32.0)
       '@nx/devkit': 19.5.3(nx@19.5.3)
       '@nx/workspace': 19.5.3(@swc-node/register@1.9.2)(@swc/core@1.5.29)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.24.9)
@@ -6196,6 +6223,10 @@ packages:
     dependencies:
       '@types/minimatch': 5.1.2
       '@types/node': 18.16.9
+    dev: true
+
+  /@types/google.maps@3.58.0:
+    resolution: {integrity: sha512-rZPrbNHoGxeY70uuQYFLGQqcz5mLd3pZy0u286GSugvN7PLFsHNRF2wN2QXtUgNiC33IC0LX+MD3LGAC3wN7Eg==}
     dev: true
 
   /@types/graceful-fs@4.1.9:
