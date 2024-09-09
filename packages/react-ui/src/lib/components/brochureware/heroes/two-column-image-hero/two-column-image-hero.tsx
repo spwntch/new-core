@@ -89,7 +89,7 @@ export const TwoColumnImageHero = forwardRef<
                 )}
               </ContentContainer>
             </div>
-            <div className="pt-32 flex items-center justify-center w-full">
+            <div className="pt-32 flex items-center justify-center w-full h-full">
               {children}
             </div>
           </div>

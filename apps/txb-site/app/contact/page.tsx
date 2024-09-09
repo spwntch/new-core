@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <ContactPage
     hero={{ image: CONTACT_HERO_IMAGE, content: CONTACT_HERO_CONTENT }}
-    calendlyUrl="https://calendly.com/d/cmd4-4jg-zft/the-experience-business"
-    calendlyStyles={{
+    calendarUrl="dave-benjamin/30min"
+    calendarStyles={{
       
     }}
     // clientLogos={TECH_LOGOS}

@@ -1,5 +1,6 @@
 'use client';
-import { Calendly } from '@/crm';
+import { CalDotCom } from '@/crm';
+// import { Calendly } from '@/crm';
 import { IContent, IImage, TwoColumnImageHero } from '@spwntch/react-ui';
 
 export interface ContactPageProps {
@@ -7,21 +8,28 @@ export interface ContactPageProps {
     image: IImage;
     content: IContent;
   };
-  calendlyUrl: string;
-  calendlyStyles?: { [key: string]: string };
+  calendarUrl: string;
+  calendarStyles?: { [key: string]: string };
 }
 
-export const ContactPage = ({ hero, calendlyUrl, calendlyStyles }: ContactPageProps) => {
+export const ContactPage = ({
+  hero,
+  calendarUrl,
+  calendarStyles,
+}: ContactPageProps) => {
   return (
     <div className="flex flex-col">
       <TwoColumnImageHero
         image={hero.image}
         innerContent={hero.content}
-        hAlign='left'
+        hAlign="left"
         className="text-white"
-    >
-      <Calendly calendlyUrl={calendlyUrl} styles={calendlyStyles}/>
-    </TwoColumnImageHero>
+      >
+        <div className='w-full text-center'>
+          <h2 className='text-3xl mb-3 font-semibold'>Meet with Us</h2>
+          <CalDotCom calendarUrl={calendarUrl} />
+        </div>
+      </TwoColumnImageHero>
     </div>
   );
 };
