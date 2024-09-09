@@ -27,6 +27,7 @@ export default function RootLayout({
           brand={brand}
           navItems={NAV}
           navbar={navbar}
+          hideShellPaths={['/try/icp-generator', '/buy/icp-generator']}
         >
           {children}
         </SiteShell>

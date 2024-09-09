@@ -10,6 +10,7 @@ import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
+  hideToolbar?: boolean;
   floating?: boolean;
   className?: string;
   logoHeight?: number;
@@ -26,6 +27,7 @@ interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
 export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
   (
     {
+      hideToolbar,
       floating,
       className,
       logoHeight,
@@ -84,18 +86,22 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
           onClick={() => onLinkTo('/')}
           variant={isMobile ? 'mark' : 'logo'}
         />
-        <NavToolbar
-          alignment={navAlignment}
-          floating={initialNavbar && floating}
-          onLinkTo={onLinkTo}
-          className="flex-1"
-        />
-        <ButtonGroup>
-          {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
-          {!disableThemeToggle && <ThemeToggleButton />}
-          {githubUrl && <GithubButton url={githubUrl} />}
-          {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
-        </ButtonGroup>
+        {!hideToolbar && (
+          <NavToolbar
+            alignment={navAlignment}
+            floating={initialNavbar && floating}
+            onLinkTo={onLinkTo}
+            className="flex-1"
+          />
+        )}
+        {!hideToolbar && (
+          <ButtonGroup>
+            {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
+            {!disableThemeToggle && <ThemeToggleButton />}
+            {githubUrl && <GithubButton url={githubUrl} />}
+            {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
+          </ButtonGroup>
+        )}
       </motion.nav>
     );
   }
