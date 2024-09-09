@@ -28,14 +28,10 @@ export const NavToolbarMenu = ({
     // }
 
     return (
-      <>
+      <div key={(item as INavLink).href}>
         {index !== 0 && <DropdownMenuSeparator />}
-        <NavToolbarMenuLink
-          key={(item as INavLink).href}
-          {...(item as INavLink)}
-          onLinkTo={onLinkTo}
-        />
-      </>
+        <NavToolbarMenuLink {...(item as INavLink)} onLinkTo={onLinkTo} />
+      </div>
     );
   };
 
