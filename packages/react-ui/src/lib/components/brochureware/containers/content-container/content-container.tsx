@@ -1,4 +1,4 @@
-import { PropsWithChildren, forwardRef } from 'react';
+import { PropsWithChildren, ReactNode, forwardRef } from 'react';
 import { IContent } from '../../../../types';
 import {
   cn,

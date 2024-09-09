@@ -16,6 +16,7 @@ export interface IBrandAbout {
 }
 
 export interface IBrandContact {
+  address?: string;
   website: string;
   mail: string;
   phone: string;

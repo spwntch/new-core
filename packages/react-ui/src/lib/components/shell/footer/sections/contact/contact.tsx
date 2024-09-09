@@ -1,5 +1,5 @@
 import React, { forwardRef, PropsWithChildren } from 'react';
-import { Globe, Mail, Phone } from 'lucide-react';
+import { Globe, LocateIcon, Mail, MapPin, Phone } from 'lucide-react';
 import { useBrand } from '../../../../../providers';
 
 export interface IContactProps
@@ -16,6 +16,17 @@ export const Contact = forwardRef<HTMLDivElement, IContactProps>(
       <div className={`p-4 ${className}`} ref={ref} {...props}>
         <h3 className="mb-4 font-bold">Contact</h3>
         <ul className="text-sm leading-relaxed">
+          <li>
+            <MapPin className="inline h-4 w-4 mr-2"/>
+            <a
+              href={`/contact`}
+              className="underline hover:text-blue-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {contact?.address}
+            </a>
+          </li>
           <li>
             <Globe className="inline h-4 w-4 mr-2" />
             <a
