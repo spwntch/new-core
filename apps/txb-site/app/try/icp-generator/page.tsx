@@ -1,10 +1,9 @@
-import IcpGenerator from '../../../components/icp-generator';
-import React from 'react';
+import { TryProductStepper } from '@/next-marketing-pages';
 
 const TryIcpGenerator = () => {
   return (
-    <div className="pt-32">
-      <IcpGenerator />
+    <div>
+        <TryProductStepper />
     </div>
   );
 };
