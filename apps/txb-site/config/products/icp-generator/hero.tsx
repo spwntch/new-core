@@ -44,17 +44,7 @@ export const HERO_CONTENT: IContent = {
     },
   ],
   ctas: [
-    {
-      label: 'INSTANT ICP - $49',
-      variant: { size: 'xl' },
-      //   url: '/start',
-      //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',
-    },
-    {
-      label: 'TRY FREE',
-      variant: { size: 'xl', variant: 'link' },
-      //   url: '/start',
-      //   className: 'bg-blue-600 text-white py-3 px-6 rounded-lg',
-    },
+    { label: 'INSTANT ICP - $49', variant: { size: 'xl' } , href: '/buy/icp-generator' },
+    { label: 'TRY FREE', variant: { size: 'xl', variant: 'link' }, href: '/try/icp-generator' },
   ],
 };
