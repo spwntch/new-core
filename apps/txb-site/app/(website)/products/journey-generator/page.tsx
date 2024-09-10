@@ -3,10 +3,11 @@ import {
   BENEFITS,
   FAQ,
   HERO_CONTENT,
-  HERO_IMAGE
-} from '../../../../config/products/journey-generator';
+  HERO_IMAGE,
+} from '../../../../config/website/products/journey-generator';
 
-const title = 'AI Powered Journey Map Generator | Automate Customer Journey Mapping with AI';
+const title =
+  'AI Powered Journey Map Generator | Automate Customer Journey Mapping with AI';
 const description =
   'Automatically generate comprehensive customer journey maps for B2B and B2C markets with the AI Powered Journey Map Generator. Leverage AI-driven insights to optimize every touchpoint and enhance your customer experience strategy. Achieve faster time-to-market, increased flexibility, and data-driven optimization for superior results.';
 const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/products/journey-generator/journey-hero-image.png`;
@@ -54,7 +55,11 @@ export const metadata = {
 export default function Index() {
   return (
     <DigitalProductLandingPage
-      hero={{ image: HERO_IMAGE, content: HERO_CONTENT, ribbon:'Launching Q4, 2024' }}
+      hero={{
+        image: HERO_IMAGE,
+        content: HERO_CONTENT,
+        ribbon: 'Launching Q4, 2024',
+      }}
       // painPoints={PAIN_POINTS}
       benefits={BENEFITS}
       // features={FEATURES}

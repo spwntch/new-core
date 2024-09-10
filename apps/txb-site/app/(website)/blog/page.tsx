@@ -3,7 +3,7 @@ import {
   BLOG_HERO,
   BLOG_HERO_IMAGE,
   BLOG_POSTS
-} from '../../../config';
+} from '../../../config/website/blog';
 
 const BlogPage = () => {
   return (

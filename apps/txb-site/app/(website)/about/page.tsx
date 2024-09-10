@@ -3,8 +3,8 @@ import {
   ABOUT_HERO_CONTENT,
   ABOUT_HERO_IMAGE,
   PAIN_POINTS,
-  TEAM
-} from '../../../config/about';
+  TEAM,
+} from '../../../config/website/about';
 
 const About = () => {
   return (

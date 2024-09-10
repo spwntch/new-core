@@ -1,7 +1,6 @@
 import { INavBar, SiteShell } from '@/next-marketing-pages';
-import { brand, NAV } from '../../config';
-
-
+import { brand } from '../../config/brand';
+import { NAV } from '../../config/website/nav';
 
 export default function RootLayout({
   children,

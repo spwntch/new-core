@@ -1,14 +1,21 @@
 import { DigitalProductsHomePage } from '@/next-marketing-pages';
+// import {
+//   BLOG_POSTS,
+//   TECH_LOGOS,
+//   FEATURED_POSTS,
+//   HOME_HERO_CONTENT,
+//   HOME_HERO_IMAGE,
+// } from '../../config';
+import { BLOG_POSTS, FEATURED_POSTS } from '../../config/website/blog';
 import {
-  BLOG_POSTS,
-  TECH_LOGOS,
-  FEATURED_POSTS,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
-} from '../../config';
-import { PRODUCTS } from '../../config/home/products';
+  TECH_LOGOS,
+} from '../../config/website/home';
+import { PRODUCTS } from '../../config/website/home/products';
 
-const title = 'The Experience Business | Innovating Customer Experiences with AI and Technology';
+const title =
+  'The Experience Business | Innovating Customer Experiences with AI and Technology';
 const description =
   'The Experience Business (TXB) leverages advanced technology and artificial intelligence to make leading intellectual property in UX, lean product development, and insights management accessible to a broader audience of business users. Discover how our solutions can transform your customer and user experiences.';
 const image = `${process.env.NEXT_PUBLIC_SITE_URL}/images/home/txb-home-cover.webp`;

@@ -4,7 +4,7 @@ import { readFileSync, readdirSync } from 'fs';
 import { ArticlePage } from '@/next-marketing-pages';
 import { notFound } from 'next/navigation';
 import { join } from 'path';
-import { BLOG_POSTS } from '../../../../config';
+import { BLOG_POSTS } from '../../../../config/website/blog';
 import { parseMdxFileBuffer } from '../../../../utils/parse-mdx-file-buffer';
 // import { parseMdxFileBuffer } from '../../../utils/parse-mdx-file-buffer';
 
@@ -65,7 +65,6 @@ const getBuffer = (slug: string) => {
 };
 
 const PostPage = async ({ params: { slug } }: Props) => {
-
   const post = findPost(slug);
   const buffer = getBuffer(slug);
   const doc = await parseMdxFileBuffer(buffer);
