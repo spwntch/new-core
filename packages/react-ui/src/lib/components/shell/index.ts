@@ -5,3 +5,4 @@ export * from './footer';
 export * from './social';
 export * from './placeholders';
 export * from './app-shells';
+export * from './session-menu/session-menu';

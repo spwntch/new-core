@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { withBrandProvider, withFullWidth, withNavProvider } from '../../../../storybook';
-import { MobileNavDrawer } from './mobile-nav-drawer';
-import { playBasic } from './mobile-nav-drawer.specs';
+import {
+  withBrandProvider,
+  withFullWidth,
+  withNavProvider,
+} from '../../../../storybook';
+import { MobileWebsiteNavDrawer } from './mobile-website-nav-drawer';
+import { playBasic } from './mobile-website-nav-drawer.specs';
 
 /**
  * The `MobileNavDrawer` component provides a navigation drawer for mobile devices.
@@ -24,9 +28,9 @@ import { playBasic } from './mobile-nav-drawer.specs';
  * }
  * ```
  */
-const meta: Meta<typeof MobileNavDrawer> = {
+const meta: Meta<typeof MobileWebsiteNavDrawer> = {
   title: 'shell/nav/mobile-nav-drawer',
-  component: MobileNavDrawer,
+  component: MobileWebsiteNavDrawer,
   decorators: [withFullWidth, withNavProvider, withBrandProvider],
   tags: ['autodocs'],
   parameters: {
@@ -42,7 +46,7 @@ const meta: Meta<typeof MobileNavDrawer> = {
 
 export default meta;
 
-type Story = StoryObj<typeof MobileNavDrawer>;
+type Story = StoryObj<typeof MobileWebsiteNavDrawer>;
 
 /**
  * Basic MobileNavDrawer example.

@@ -4,7 +4,7 @@ import { Input } from '../../shadcn-ui';
 
 const SearchBar = () => {
   return (
-    <form>
+    <form className='w-full'>
       <div className="relative">
         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
         <Input

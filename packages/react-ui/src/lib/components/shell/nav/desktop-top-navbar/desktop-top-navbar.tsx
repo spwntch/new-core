@@ -6,7 +6,7 @@ import { ButtonGroup, GithubButton } from '../../../components';
 import { Button } from '../../../shadcn-ui';
 import { Logo } from '../../brand';
 import { ThemeToggleButton } from '../../buttons';
-import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
+import { MobileWebsiteNavDrawer } from '../mobile-website-nav-drawer/mobile-website-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
@@ -104,7 +104,7 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
             )}
             {!disableThemeToggle && <ThemeToggleButton />}
             {githubUrl && <GithubButton url={githubUrl} />}
-            {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
+            {isMobile && <MobileWebsiteNavDrawer onLinkTo={onLinkTo} />}
           </ButtonGroup>
         )}
       </motion.nav>

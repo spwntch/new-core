@@ -20,7 +20,7 @@ interface IMobileNavDrawerProps {
   onLinkTo: (href: string) => void;
 }
 
-export const MobileNavDrawer: React.FC<IMobileNavDrawerProps> = ({
+export const MobileWebsiteNavDrawer: React.FC<IMobileNavDrawerProps> = ({
   onLinkTo,
 }) => {
   const [open, setOpen] = useState(false);
