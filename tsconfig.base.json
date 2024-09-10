@@ -23,6 +23,7 @@
       "@/next-marketing-pages/server": [
         "libs/next-marketing-pages/src/server.ts"
       ],
+      "@/node-supabase": ["libs/node-supabase/src/index.ts"],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
