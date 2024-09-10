@@ -3,6 +3,7 @@ import { createServerDbClient, ServerDbClients } from '@/node-supabase';
 import { redirect } from 'next/navigation';
 import { NAV } from '../../config/app/nav';
 import { BRAND } from '../../config/brand';
+import '../global.css';
 
 export const metadata = {
   title: 'Next.js',
@@ -26,13 +27,17 @@ export default async function AppLayout({
     .eq('id', session.user.id)
     .single();
 
-  console.log({ user, error });
+  // console.log({ user, error });
   // if (user && !user.admin_role)
   //   return <SystemMessageHero {...adminAccessDenied} />;
 
   return (
-    <AppShell brand={BRAND} navItems={NAV}>
-      {children}
-    </AppShell>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <AppShell brand={BRAND} navItems={NAV}>
+          {children}
+        </AppShell>
+      </body>
+    </html>
   );
 }

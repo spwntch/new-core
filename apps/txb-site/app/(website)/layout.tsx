@@ -1,6 +1,7 @@
 import { INavBar, SiteShell } from '@/next-marketing-pages';
 import { BRAND } from '../../config/brand';
 import { NAV } from '../../config/website/nav';
+import '../global.css';
 
 export default function WebsiteLayout({
   children,
@@ -19,14 +20,18 @@ export default function WebsiteLayout({
   };
 
   return (
-    <SiteShell
-      brand={BRAND}
-      navItems={NAV}
-      navbar={navbar}
-      cta={cta}
-      hideShellPaths={['/try/icp-generator', '/buy/icp-generator']}
-    >
-      {children}
-    </SiteShell>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <SiteShell
+          brand={BRAND}
+          navItems={NAV}
+          navbar={navbar}
+          cta={cta}
+          hideShellPaths={['/try/icp-generator', '/buy/icp-generator']}
+        >
+          {children}
+        </SiteShell>
+      </body>
+    </html>
   );
 }

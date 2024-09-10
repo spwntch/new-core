@@ -10,7 +10,7 @@ export interface AppShellProps extends IShellProviderProps {
   ping?: string;
 }
 
-export const AppShell = ({
+export const AuthShell = ({
   brand,
   navItems,
   children,
@@ -23,7 +23,7 @@ export const AppShell = ({
       // navItems={pathname === '/' ? navItems : undefined}
       defaultTheme="dark"
     >
-      <ApplicationShell>{children}</ApplicationShell>
+      <div>{children}</div>
     </ShellProvider>
   );
 };

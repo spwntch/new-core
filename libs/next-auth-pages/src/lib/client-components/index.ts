@@ -1,1 +1,1 @@
-export * from './auth-shell/auth-shell'
+export * from './authentication-shell/authentication-shell'
