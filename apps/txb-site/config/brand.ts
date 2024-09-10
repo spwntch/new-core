@@ -1,6 +1,6 @@
 import { IBrand } from '@spwntch/react-ui';
 
-export const brand: IBrand = {
+export const BRAND: IBrand = {
   logoUrl: {
     light: '/brand/logo-light.webp',
     dark: '/brand/logo-dark.webp',
@@ -24,7 +24,8 @@ export const brand: IBrand = {
     ],
   },
   contact: {
-    address: '3 Sandown Valley Crescent, Sandton, Johannesburg, 2196, South Africa',
+    address:
+      '3 Sandown Valley Crescent, Sandton, Johannesburg, 2196, South Africa',
     website: 'www.theexperiencebusiness.com',
     mail: 'hello@theexperiencebusiness.com',
     phone: '+27 11 994 9960',

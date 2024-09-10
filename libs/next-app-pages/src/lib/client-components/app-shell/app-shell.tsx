@@ -15,6 +15,7 @@ export const AppShell = ({
   navItems,
   children,
 }: AppShellProps & PropsWithChildren) => {
+
   return (
     <ShellProvider
       brand={brand}

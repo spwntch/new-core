@@ -1,5 +1,5 @@
 import { INavBar, SiteShell } from '@/next-marketing-pages';
-import { brand } from '../../config/brand';
+import { BRAND } from '../../config/brand';
 import { NAV } from '../../config/website/nav';
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 
   return (
     <SiteShell
-      brand={brand}
+      brand={BRAND}
       navItems={NAV}
       navbar={navbar}
       cta={cta}
