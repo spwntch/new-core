@@ -1,61 +1,77 @@
+'use client';
 import {
-    ChevronLeft,
-    ChevronRight,
-    Copy,
-    CreditCard,
-    File,
-    Home,
-    LineChart,
-    ListFilter,
-    MoreVertical,
-    Package,
-    Package2,
-    PanelLeft,
-    Search,
-    Settings,
-    ShoppingCart,
-    Truck,
-    Users2,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+  ChevronLeft,
+  ChevronRight,
+  Copy,
+  CreditCard,
+  File,
+  Home,
+  LineChart,
+  ListFilter,
+  MoreVertical,
+  Package,
+  Package2,
+  PanelLeft,
+  Search,
+  Settings,
+  ShoppingCart,
+  Truck,
+  Users2,
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import {
-    Badge, Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator, Button, Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle, DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger, Input, Pagination,
-    PaginationContent,
-    PaginationItem, Progress, Separator, Sheet, SheetContent, SheetTrigger, Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow, Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger, Tooltip,
-    TooltipContent,
-    TooltipTrigger
-} from "@spwntch/react-ui"
+  Badge,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+  Input,
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  Progress,
+  Separator,
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@spwntch/react-ui';
 
 export const description =
-  "An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information."
+  'An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information.';
 
-export function Dashboard() {
+export function Dashboard2() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
@@ -67,6 +83,7 @@ export function Dashboard() {
             <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
             <span className="sr-only">Acme Inc</span>
           </Link>
+          <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -79,6 +96,8 @@ export function Dashboard() {
             </TooltipTrigger>
             <TooltipContent side="right">Dashboard</TooltipContent>
           </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -91,6 +110,8 @@ export function Dashboard() {
             </TooltipTrigger>
             <TooltipContent side="right">Orders</TooltipContent>
           </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -103,6 +124,8 @@ export function Dashboard() {
             </TooltipTrigger>
             <TooltipContent side="right">Products</TooltipContent>
           </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -115,6 +138,8 @@ export function Dashboard() {
             </TooltipTrigger>
             <TooltipContent side="right">Customers</TooltipContent>
           </Tooltip>
+          </TooltipProvider>
+          <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -127,8 +152,10 @@ export function Dashboard() {
             </TooltipTrigger>
             <TooltipContent side="right">Analytics</TooltipContent>
           </Tooltip>
+          </TooltipProvider>
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
+          <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
@@ -141,6 +168,7 @@ export function Dashboard() {
             </TooltipTrigger>
             <TooltipContent side="right">Settings</TooltipContent>
           </Tooltip>
+          </TooltipProvider>
         </nav>
       </aside>
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
@@ -255,9 +283,7 @@ export function Dashboard() {
         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
           <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-              <Card
-                className="sm:col-span-2" x-chunk="dashboard-05-chunk-0"
-              >
+              <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
                 <CardHeader className="pb-3">
                   <CardTitle>Your Orders</CardTitle>
                   <CardDescription className="max-w-lg text-balance leading-relaxed">
@@ -535,9 +561,7 @@ export function Dashboard() {
             </Tabs>
           </div>
           <div>
-            <Card
-              className="overflow-hidden" x-chunk="dashboard-05-chunk-4"
-            >
+            <Card className="overflow-hidden" x-chunk="dashboard-05-chunk-4">
               <CardHeader className="flex flex-row items-start bg-muted/50">
                 <div className="grid gap-0.5">
                   <CardTitle className="group flex items-center gap-2 text-lg">
@@ -692,5 +716,5 @@ export function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }
