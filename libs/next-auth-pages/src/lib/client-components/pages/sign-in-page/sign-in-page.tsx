@@ -11,7 +11,7 @@ export const SignInPage = () => {
   const router = useRouter();
   return (
     <div className="h-full flex flex-col items-center justify-center">
-      <Card className="w-full max-w-2xl ">
+      <Card className="w-full max-w-xl ">
         <CardHeader>
           <Logo
             height={72}
