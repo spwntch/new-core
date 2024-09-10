@@ -16,7 +16,7 @@ export default function RootLayout({
 
   const cta = {
     label: 'SIGN IN',
-    href: '/sign-in',
+    href: '/dashboard',
   };
 
   return (

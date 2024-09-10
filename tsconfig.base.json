@@ -17,6 +17,8 @@
     "paths": {
       "@/codux": ["codux/src/index.ts"],
       "@/crm": ["libs/crm/src/index.ts"],
+      "@/next-app-pages": ["libs/next-app-pages/src/index.ts"],
+      "@/next-app-pages/server": ["libs/next-app-pages/src/server.ts"],
       "@/next-marketing-pages": ["libs/next-marketing-pages/src/index.ts"],
       "@/next-marketing-pages/server": [
         "libs/next-marketing-pages/src/server.ts"
