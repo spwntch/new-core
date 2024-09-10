@@ -2,7 +2,7 @@ import { INavBar, SiteShell } from '@/next-marketing-pages';
 import { BRAND } from '../../config/brand';
 import { NAV } from '../../config/website/nav';
 
-export default function RootLayout({
+export default function WebsiteLayout({
   children,
 }: {
   children: React.ReactNode;
