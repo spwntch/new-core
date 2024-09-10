@@ -1,7 +1,8 @@
+import { Dashboard } from '../../../components/dashboard/dashboard';
 import React from 'react';
 
 const Page = () => {
-  return <div className="text-primary text-5xl">Page</div>;
+  return <Dashboard />;
 };
 
 export default Page;
