@@ -2,7 +2,7 @@
 import {
   IShellProviderProps,
   ShellProvider,
-  SiteShellStarter,
+  WebsiteShell,
 } from '@spwntch/react-ui';
 import { usePathname, useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
@@ -20,6 +20,10 @@ export interface SiteShellProps extends IShellProviderProps {
   hideShellPaths?: string[];
   underContruction?: boolean;
   githubUrl?: string;
+  cta?: {
+    label: string;
+    href: string;
+  };
 }
 
 export const SiteShell = ({
@@ -29,6 +33,7 @@ export const SiteShell = ({
   navbar,
   hideShellPaths,
   githubUrl,
+  cta,
   children,
 }: SiteShellProps & PropsWithChildren) => {
   const router = useRouter();
@@ -44,15 +49,16 @@ export const SiteShell = ({
       // navItems={pathname === '/' ? navItems : undefined}
       defaultTheme="dark"
     >
-      <SiteShellStarter
+      <WebsiteShell
         navbar={navbar}
         underContruction={underContruction}
         githubUrl={githubUrl}
-        onNavbarLinkTo={handleLinkTo}
+        onLinkTo={handleLinkTo}
         hideShell={hideShellPaths?.includes(pathname)}
+        cta={cta}
       >
         {children}
-      </SiteShellStarter>
+      </WebsiteShell>
     </ShellProvider>
   );
 };

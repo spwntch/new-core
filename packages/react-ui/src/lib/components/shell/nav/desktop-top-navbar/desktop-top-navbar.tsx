@@ -17,10 +17,11 @@ interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
   navAlignment?: 'start' | 'center' | 'end';
   cta?: {
     label: string;
-    onCta: () => void;
+    href: string;
   };
   disableThemeToggle?: boolean;
   githubUrl?: string;
+
   onLinkTo: (href: string) => void;
 }
 
@@ -96,7 +97,11 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         )}
         {!hideToolbar && (
           <ButtonGroup>
-            {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
+            {cta && (
+              <Button onClick={() => onLinkTo(cta.href)}>
+                {cta.label || 'GET STARTED'}
+              </Button>
+            )}
             {!disableThemeToggle && <ThemeToggleButton />}
             {githubUrl && <GithubButton url={githubUrl} />}
             {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}

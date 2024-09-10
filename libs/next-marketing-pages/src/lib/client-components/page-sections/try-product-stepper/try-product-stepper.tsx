@@ -17,7 +17,7 @@ export const TryProductStepper = ({ steps }: TryProductStepperProps) => {
   return (
     <div className="pt-24 px-8 w-full">
       <div className="container w-full mx-auto shadow-xl rounded-2xl pb-2">
-        <h1 className="text-center text-3xl">Try the ICP Generator</h1>
+        <h1 className="text-center text-3xl">Try the ICP Generator, free. Our Gift to You.</h1>
         <h2 className="text-center text-2xl mt-2 max-w-2xl mx-auto">Every succesful business starts with a product idea.</h2>
         <h3 className="text-center text-lg mt-1">What's yours?</h3>
         <div className="horizontal mt-8 w-full">

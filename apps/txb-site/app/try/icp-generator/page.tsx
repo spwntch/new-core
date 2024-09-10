@@ -3,6 +3,14 @@ import NewProductForm from '../../../components/product/new-product-form';
 
 const TryIcpGenerator = () => {
   const steps = [
+    // {
+    //   title: 'About You',
+    //   description: [
+    //     `To make sure we're buiding the best possible software, we need to know a little bit about you.`,
+    //     `We eill never use your personal information for any purpose other than to improve our software.`,
+    //   ],
+    //   form: <div>Comnmg soon</div>,
+    // },
     {
       title: 'Product Resarch',
       description: [

@@ -1,6 +1,7 @@
 import { INavBar, SiteShell } from '@/next-marketing-pages';
 import { brand, NAV } from '../config';
 import './global.css';
+import { useRouter } from 'next/navigation';
 
 export const metadata = {
   metadataBase:
@@ -20,6 +21,11 @@ export default function RootLayout({
     disableThemeToggle: true,
   };
 
+  const cta = {
+    label: 'SIGN IN',
+    href: '/sign-in',
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
@@ -27,7 +33,9 @@ export default function RootLayout({
           brand={brand}
           navItems={NAV}
           navbar={navbar}
+          cta={cta}
           hideShellPaths={['/try/icp-generator', '/buy/icp-generator']}
+
         >
           {children}
         </SiteShell>

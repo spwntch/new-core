@@ -3,7 +3,7 @@ import { cn } from '../../../../utils';
 import { RegularFooter, UnderConstructionFooter } from '../../footer';
 import { DesktopTopNavbar } from '../../nav';
 
-export interface SiteShellProps {
+export interface WebsiteShellProps {
   navbar: {
     floating?: boolean;
     logoHeight?: number;
@@ -13,18 +13,23 @@ export interface SiteShellProps {
   };
   githubUrl?: string;
   hideShell?: boolean;
+  cta?: {
+    label: string;
+    href: string;
+  };
   underContruction?: boolean;
-  onNavbarLinkTo: (href: string) => void;
+  onLinkTo: (href: string) => void;
 }
 
-export const SiteShellStarter = ({
+export const WebsiteShell = ({
   navbar,
   githubUrl,
   hideShell,
   underContruction,
-  onNavbarLinkTo,
+  cta,
+  onLinkTo,
   children,
-}: SiteShellProps & PropsWithChildren) => {
+}: WebsiteShellProps & PropsWithChildren) => {
   return (
     <>
       <DesktopTopNavbar
@@ -38,7 +43,8 @@ export const SiteShellStarter = ({
         logoHeight={navbar?.logoHeight}
         disableThemeToggle={navbar?.disableThemeToggle}
         githubUrl={githubUrl}
-        onLinkTo={onNavbarLinkTo}
+        cta={cta}
+        onLinkTo={onLinkTo}
       />
 
       <main className={cn(navbar.floating && 'relative -top-[100px]')}>
@@ -50,4 +56,4 @@ export const SiteShellStarter = ({
   );
 };
 
-export default SiteShellStarter;
+export default WebsiteShell;
