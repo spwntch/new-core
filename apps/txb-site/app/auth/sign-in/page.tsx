@@ -1,6 +1,7 @@
+import { SignInPage } from '@/next-auth-pages';
 
-const SignInPage = () => {
-  return <div>SignInPage</div>;
+const Signin = () => {
+  return <SignInPage />;
 };
 
-export default SignInPage;
+export default Signin;

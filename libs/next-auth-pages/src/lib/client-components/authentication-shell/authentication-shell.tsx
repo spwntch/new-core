@@ -1,29 +1,18 @@
 'use client';
-import {
-  ApplicationShell,
-  IShellProviderProps,
-  ShellProvider,
-} from '@spwntch/react-ui';
+import { IShellProviderProps, ShellProvider } from '@spwntch/react-ui';
 import { PropsWithChildren } from 'react';
 
-export interface AppShellProps extends IShellProviderProps {
-  ping?: string;
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface AuthShellProps extends IShellProviderProps {}
 
 export const AuthShell = ({
   brand,
   navItems,
   children,
-}: AppShellProps & PropsWithChildren) => {
-
+}: AuthShellProps & PropsWithChildren) => {
   return (
-    <ShellProvider
-      brand={brand}
-      navItems={navItems}
-      // navItems={pathname === '/' ? navItems : undefined}
-      defaultTheme="dark"
-    >
-      <div>{children}</div>
+    <ShellProvider brand={brand} defaultTheme="dark">
+      <div className="h-screen bg-muted">{children}</div>
     </ShellProvider>
   );
 };
