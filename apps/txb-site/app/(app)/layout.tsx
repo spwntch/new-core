@@ -20,13 +20,13 @@ export default async function AppLayout({
     data: { session },
   } = await supabase.auth.getSession();
   if (!session) redirect('/auth/sign-in');
-  const { data: user } = await supabase
+  const { data: user, error } = await supabase
     .from('users')
     .select('*')
     .eq('id', session.user.id)
     .single();
 
-  console.log(user);
+  console.log({ user, error });
   // if (user && !user.admin_role)
   //   return <SystemMessageHero {...adminAccessDenied} />;
 
