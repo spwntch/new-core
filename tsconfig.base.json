@@ -19,6 +19,8 @@
       "@/crm": ["libs/crm/src/index.ts"],
       "@/next-app-pages": ["libs/next-app-pages/src/index.ts"],
       "@/next-app-pages/server": ["libs/next-app-pages/src/server.ts"],
+      "@/next-auth-pages": ["libs/next-auth-pages/src/index.ts"],
+      "@/next-auth-pages/server": ["libs/next-auth-pages/src/server.ts"],
       "@/next-marketing-pages": ["libs/next-marketing-pages/src/index.ts"],
       "@/next-marketing-pages/server": [
         "libs/next-marketing-pages/src/server.ts"
