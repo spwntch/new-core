@@ -12,7 +12,7 @@ export const AuthShell = ({
 }: AuthShellProps & PropsWithChildren) => {
   return (
     <ShellProvider brand={brand} defaultTheme="dark">
-      <div className="h-screen">{children}</div>
+      <div className="h-screen bg-muted">{children}</div>
     </ShellProvider>
   );
 };
