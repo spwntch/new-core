@@ -23,7 +23,7 @@ export const AuthShell = ({
       // navItems={pathname === '/' ? navItems : undefined}
       defaultTheme="dark"
     >
-      <div>{children}</div>
+      <div className='h-screen'>{children}</div>
     </ShellProvider>
   );
 };
