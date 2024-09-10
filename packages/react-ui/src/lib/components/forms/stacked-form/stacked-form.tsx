@@ -27,7 +27,7 @@ const StackedForm = ({
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className={cn(
-            'flex flex-col space-between gap-x-16 gap-y-8 items-center px-4'
+            'flex flex-col space-between gap-x-16 gap-y-6 items-center px-4'
             // isMobile && 'flex-col',
           )}
         >
