@@ -17,10 +17,15 @@
     "paths": {
       "@/codux": ["codux/src/index.ts"],
       "@/crm": ["libs/crm/src/index.ts"],
+      "@/next-app-pages": ["libs/next-app-pages/src/index.ts"],
+      "@/next-app-pages/server": ["libs/next-app-pages/src/server.ts"],
+      "@/next-auth-pages": ["libs/next-auth-pages/src/index.ts"],
+      "@/next-auth-pages/server": ["libs/next-auth-pages/src/server.ts"],
       "@/next-marketing-pages": ["libs/next-marketing-pages/src/index.ts"],
       "@/next-marketing-pages/server": [
         "libs/next-marketing-pages/src/server.ts"
       ],
+      "@/node-supabase": ["libs/node-supabase/src/index.ts"],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]

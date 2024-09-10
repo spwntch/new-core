@@ -6,7 +6,7 @@ import { ButtonGroup, GithubButton } from '../../../components';
 import { Button } from '../../../shadcn-ui';
 import { Logo } from '../../brand';
 import { ThemeToggleButton } from '../../buttons';
-import { MobileNavDrawer } from '../mobile-nav-drawer/mobile-nav-drawer';
+import { MobileWebsiteNavDrawer } from '../mobile-website-nav-drawer/mobile-website-nav-drawer';
 import { NavToolbar } from '../nav-toolbar/nav-toolbar';
 
 interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
@@ -17,10 +17,11 @@ interface IDesktopTopNavbarProps extends React.HTMLAttributes<HTMLElement> {
   navAlignment?: 'start' | 'center' | 'end';
   cta?: {
     label: string;
-    onCta: () => void;
+    href: string;
   };
   disableThemeToggle?: boolean;
   githubUrl?: string;
+
   onLinkTo: (href: string) => void;
 }
 
@@ -96,10 +97,14 @@ export const DesktopTopNavbar = forwardRef<HTMLElement, IDesktopTopNavbarProps>(
         )}
         {!hideToolbar && (
           <ButtonGroup>
-            {cta && <Button onClick={cta?.onCta}>GET STARTED</Button>}
+            {cta && (
+              <Button onClick={() => onLinkTo(cta.href)}>
+                {cta.label || 'GET STARTED'}
+              </Button>
+            )}
             {!disableThemeToggle && <ThemeToggleButton />}
             {githubUrl && <GithubButton url={githubUrl} />}
-            {isMobile && <MobileNavDrawer onLinkTo={onLinkTo} />}
+            {isMobile && <MobileWebsiteNavDrawer onLinkTo={onLinkTo} />}
           </ButtonGroup>
         )}
       </motion.nav>
