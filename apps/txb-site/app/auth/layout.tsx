@@ -1,5 +1,6 @@
 import { AuthShell } from '@/next-auth-pages';
 import '../global.css';
+import { BRAND } from '../../config/brand';
 
 export const metadata = {
   title: 'Next.js',
@@ -14,7 +15,7 @@ export default async function AuthLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <AuthShell>{children}</AuthShell>
+        <AuthShell brand={BRAND}>{children}</AuthShell>
       </body>
     </html>
   );
