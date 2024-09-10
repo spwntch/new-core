@@ -28,7 +28,7 @@ export const SignInForm = () => {
     <StackedForm
       form={form}
       submitButton={{
-        label: 'SIGN IN',
+        label: 'SIGN IN WITH EMAIL',
       }}
       onSubmit={handleFormSubmit}
       className=""
