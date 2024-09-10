@@ -2,13 +2,15 @@
 
 import { Button, Card, CardContent, CardHeader, Logo } from '@spwntch/react-ui';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export const SignInPage = () => {
+  const router = useRouter();
   return (
     <div className="h-full flex flex-col items-center justify-center">
       <Card className="w-full max-w-lg ">
         <CardHeader>
-          <Logo className="mx-auto" />
+          <Logo className="mx-auto cursor-pointer" onClick={() => router.push('/')} />
         </CardHeader>
         <CardContent>
           <div className="grid gap-4">
