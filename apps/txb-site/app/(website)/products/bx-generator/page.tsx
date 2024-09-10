@@ -6,7 +6,7 @@ import {
   // FAQ,
   HERO_CONTENT,
   HERO_IMAGE
-} from '../../../config/products/bx-generator';
+} from '../../../../config/products/bx-generator';
 
 const title = 'AI Powered Journey Map Generator | Automate Customer Journey Mapping with AI';
 const description =

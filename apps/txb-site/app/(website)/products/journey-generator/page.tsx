@@ -4,7 +4,7 @@ import {
   FAQ,
   HERO_CONTENT,
   HERO_IMAGE
-} from '../../../config/products/journey-generator';
+} from '../../../../config/products/journey-generator';
 
 const title = 'AI Powered Journey Map Generator | Automate Customer Journey Mapping with AI';
 const description =

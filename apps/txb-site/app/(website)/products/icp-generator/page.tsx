@@ -7,7 +7,7 @@ import {
   HERO_IMAGE,
   PAIN_POINTS,
   POST_BENEFITS_CTA_BANNER,
-} from '../../../config/products/icp-generator';
+} from '../../../../config/products/icp-generator';
 
 const title =
   'AI Powered ICP Generator | Generate Ideal Customer Profiles with AI';

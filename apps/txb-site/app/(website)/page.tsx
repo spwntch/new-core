@@ -5,8 +5,8 @@ import {
   FEATURED_POSTS,
   HOME_HERO_CONTENT,
   HOME_HERO_IMAGE,
-} from '../config';
-import { PRODUCTS } from '../config/home/products';
+} from '../../config';
+import { PRODUCTS } from '../../config/home/products';
 
 const title = 'The Experience Business | Innovating Customer Experiences with AI and Technology';
 const description =

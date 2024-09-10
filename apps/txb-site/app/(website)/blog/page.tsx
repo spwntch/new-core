@@ -2,9 +2,8 @@ import { ArticlesPage } from '@/next-marketing-pages';
 import {
   BLOG_HERO,
   BLOG_HERO_IMAGE,
-  BLOG_POSTS,
-  FEATURED_POSTS,
-} from '../../config';
+  BLOG_POSTS
+} from '../../../config';
 
 const BlogPage = () => {
   return (

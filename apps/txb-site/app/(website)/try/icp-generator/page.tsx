@@ -1,5 +1,5 @@
 import { TryProductStepper } from '@/next-marketing-pages';
-import NewProductForm from '../../../components/product/new-product-form';
+import NewProductForm from '../../../../components/product/new-product-form';
 
 const TryIcpGenerator = () => {
   const steps = [

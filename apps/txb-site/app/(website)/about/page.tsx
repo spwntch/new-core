@@ -4,7 +4,7 @@ import {
   ABOUT_HERO_IMAGE,
   PAIN_POINTS,
   TEAM
-} from '../../config/about';
+} from '../../../config/about';
 
 const About = () => {
   return (

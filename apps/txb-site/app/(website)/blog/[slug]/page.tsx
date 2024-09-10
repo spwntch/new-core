@@ -1,11 +1,11 @@
 // import { ArticlePage } from '@/next-marketing-pages';
 import { readFileSync, readdirSync } from 'fs';
 // import { notFound } from 'next/navigation';
-import { join } from 'path';
-import { BLOG_POSTS } from '../../../config';
-import { parseMdxFileBuffer } from '../../../utils/parse-mdx-file-buffer';
-import { notFound } from 'next/navigation';
 import { ArticlePage } from '@/next-marketing-pages';
+import { notFound } from 'next/navigation';
+import { join } from 'path';
+import { BLOG_POSTS } from '../../../../config';
+import { parseMdxFileBuffer } from '../../../../utils/parse-mdx-file-buffer';
 // import { parseMdxFileBuffer } from '../../../utils/parse-mdx-file-buffer';
 
 type Props = {

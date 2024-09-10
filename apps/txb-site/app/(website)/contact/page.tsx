@@ -1,5 +1,5 @@
 import { ContactPage } from "@/next-marketing-pages";
-import { CONTACT_HERO_CONTENT, CONTACT_HERO_IMAGE } from "../../config";
+import { CONTACT_HERO_CONTENT, CONTACT_HERO_IMAGE } from "../../../config";
 
 const Contact = () => {
   return (
