@@ -1,1 +1,2 @@
-export * from './lib/node-supabase';
+export * from './lib/db/utils';
+export * from './lib/db/types';
