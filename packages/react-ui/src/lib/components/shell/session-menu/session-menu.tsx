@@ -5,21 +5,21 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from '../../shadcn-ui';
 
 export interface SessionMenuProps {
-    avatarSrc: string;
+  avatarSrc: string;
 }
 
-export const SessionMenu = ({avatarSrc}:SessionMenuProps) => {
+export const SessionMenu = ({ avatarSrc }: SessionMenuProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="secondary" size="icon" className="rounded-full">
           <Avatar>
-            <AvatarImage src={avatarSrc}/>
-            </Avatar>
+            <AvatarImage src={avatarSrc} />
+          </Avatar>
           <span className="sr-only">Toggle user menu</span>
         </Button>
       </DropdownMenuTrigger>
