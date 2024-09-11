@@ -20,7 +20,7 @@ export default async function AppLayout({
   const {
     data: { session },
   } = await supabase.auth.getSession();
-  if (!session) redirect('/auth/sign-in');
+  if (!session) redirect('/auth/signin');
   const { data: user, error } = await supabase
     .from('users')
     .select('*')
