@@ -1,0 +1,9 @@
+{
+  "name": "supabase-stripe-starter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/supabase-stripe-starter/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project supabase-stripe-starter --web",
+  "targets": {}
+}

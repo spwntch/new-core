@@ -28,6 +28,12 @@
       "@/node-supabase": ["libs/node-supabase/src/index.ts"],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
+      "@/supabase-stripe-starter": [
+        "libs/supabase-stripe-starter/src/index.ts"
+      ],
+      "@/supabase-stripe-starter/server": [
+        "libs/supabase-stripe-starter/src/server.ts"
+      ],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
     }
   },
