@@ -18,10 +18,10 @@ export const SignInPage = () => {
   return (
     <div className="h-full flex flex-col items-center justify-center">
       <AuthFormCard>
-        <h2 className="mt-4 text-xl text-center">Continue with...</h2>
+        <h2 className="mt-4 text-xl text-center">Third-Party Sign In</h2>
         <OauthButtons onClick={handleOauthClick} />
         <SeparatorWithLabel label="or" />
-        <h2 className="text-xl text-center">Sign in with email</h2>
+        <h2 className="text-xl text-center">Sign In With Email</h2>
         <SignInForm />
         {/* <div className="mt-4 text-center text-sm">
           Don&apos;t have an account?{' '}
