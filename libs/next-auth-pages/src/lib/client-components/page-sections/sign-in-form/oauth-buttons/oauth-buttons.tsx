@@ -1,11 +1,12 @@
-import { Button } from '@spwntch/react-ui';
+import { Button, OauthButton } from '@spwntch/react-ui';
 
 export const OauthButtons = () => {
   return (
     <div className="w-full flex justify-around">
-      <Button variant="outline">Google</Button>
-      <Button variant="outline">Microsoft 365</Button>
-      <Button variant="outline">Github</Button>
+      <OauthButton provider="google" />
+      <OauthButton provider="microsoft" />
+      <OauthButton provider="github" />
     </div>
   );
 };
+
