@@ -10,9 +10,10 @@ import {
 
 export interface SessionMenuProps {
   avatarSrc: string;
+  onSignOut: () => void;
 }
 
-export const SessionMenu = ({ avatarSrc }: SessionMenuProps) => {
+export const SessionMenu = ({ avatarSrc, onSignOut }: SessionMenuProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -29,7 +30,7 @@ export const SessionMenu = ({ avatarSrc }: SessionMenuProps) => {
         <DropdownMenuItem>Settings</DropdownMenuItem>
         <DropdownMenuItem>Support</DropdownMenuItem>
         <DropdownMenuSeparator /> */}
-        <DropdownMenuItem>Sign Out</DropdownMenuItem>
+        <DropdownMenuItem onClick={onSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
