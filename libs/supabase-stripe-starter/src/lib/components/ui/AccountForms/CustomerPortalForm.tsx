@@ -24,7 +24,7 @@ interface Props {
   subscription: SubscriptionWithPriceAndProduct | null;
 }
 
-export default function CustomerPortalForm({ subscription }: Props) {
+export function CustomerPortalForm({ subscription }: Props) {
   const router = useRouter();
   const currentPath = usePathname();
   const [isSubmitting, setIsSubmitting] = useState(false);

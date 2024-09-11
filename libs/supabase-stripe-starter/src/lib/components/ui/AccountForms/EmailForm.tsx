@@ -7,7 +7,7 @@ import { handleRequest } from '../../../utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export default function EmailForm({
+export function EmailForm({
   userEmail,
 }: {
   userEmail: string | undefined;
