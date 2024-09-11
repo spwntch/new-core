@@ -14,7 +14,7 @@ interface ForgotPasswordProps {
   disableButton?: boolean;
 }
 
-export default function ForgotPassword({
+export function ForgotPassword({
   allowEmail,
   redirectMethod,
   disableButton,

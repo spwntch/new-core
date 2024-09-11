@@ -13,7 +13,7 @@ interface SignUpProps {
   redirectMethod: string;
 }
 
-export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
+export  function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
   const _router = useRouter();
   const router = redirectMethod === 'client' ? _router : null;
   const [isSubmitting, setIsSubmitting] = useState(false);

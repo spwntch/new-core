@@ -13,7 +13,7 @@ interface PasswordSignInProps {
   redirectMethod: string;
 }
 
-export default function PasswordSignIn({
+export  function PasswordSignIn({
   allowEmail,
   redirectMethod,
 }: PasswordSignInProps) {

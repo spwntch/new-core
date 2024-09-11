@@ -1,4 +1,4 @@
-const Logo = ({ ...props }) => (
+export const Logo = ({ ...props }) => (
   <svg
     width="32"
     height="32"
@@ -17,4 +17,3 @@ const Logo = ({ ...props }) => (
   </svg>
 );
 
-export default Logo;
