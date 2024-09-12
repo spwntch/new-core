@@ -3,6 +3,7 @@ import { cn } from '../../../utils/cn';
 
 import s from './Input.module.css';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface Props extends Omit<InputHTMLAttributes<any>, 'onChange'> {
   className?: string;
   onChange: (value: string) => void;

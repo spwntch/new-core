@@ -7,6 +7,7 @@ type Props = {
 };
 
 export const CalDotCom = ({ calendarUrl }: Props) => {
+  console.log(calendarUrl);
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: '30min' });
