@@ -1,7 +1,6 @@
 'use client';
 
 import {Button} from '@spwntch/react-ui';
-import LogoCloud from '../LogoCloud';
 import type { Subscription, Price, Product } from '../../../types';
 import { getStripe } from '../../../utils/stripe/client';
 import { checkoutWithStripe } from '../../../utils/stripe/server';
@@ -96,7 +95,6 @@ export default function Pricing({ user, products, subscription }: Props) {
             .
           </p>
         </div>
-        <LogoCloud />
       </section>
     );
   } else {
@@ -193,7 +191,6 @@ export default function Pricing({ user, products, subscription }: Props) {
               );
             })}
           </div>
-          <LogoCloud />
         </div>
       </section>
     );
