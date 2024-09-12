@@ -48,7 +48,7 @@ const upsertPriceRecord = async (
     interval: price.recurring?.interval ?? null,
     interval_count: price.recurring?.interval_count ?? null,
     trial_period_days: price.recurring?.trial_period_days ?? TRIAL_PERIOD_DAYS,
-  };
+  } as Price;
 
   const { error: upsertError } = await supabaseAdmin
     .from('prices')
