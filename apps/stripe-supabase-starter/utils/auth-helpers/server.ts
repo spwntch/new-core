@@ -48,7 +48,7 @@ export async function signInWithEmail(formData: FormData) {
   }
 
   const supabase = createClient();
-  let options = {
+  const options = {
     emailRedirectTo: callbackURL,
     shouldCreateUser: true
   };
