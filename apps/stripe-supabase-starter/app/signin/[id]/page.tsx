@@ -17,7 +17,6 @@ import {
   UpdatePassword,
   SignUp,
 } from '@spwntch/saas-starter';
-import Separator from '../../../components/ui/AuthForms/Separator';
 
 export default async function SignIn({
   params,
@@ -103,7 +102,7 @@ export default async function SignIn({
             viewProp !== 'signup' &&
             allowOauth && (
               <>
-                <Separator text="Third-party sign-in" />
+                {/* <Separator text="Third-party sign-in" /> */}
                 <OauthSignIn />
               </>
             )}

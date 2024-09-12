@@ -1,11 +1,9 @@
-import CustomerPortalForm from '../../components/ui/AccountForms/CustomerPortalForm';
-import EmailForm from '../../components/ui/AccountForms/EmailForm';
-import NameForm from '../../components/ui/AccountForms/NameForm';
-import { createClient } from '../../utils/supabase/server';
+import { CustomerPortalForm, EmailForm, NameForm } from '@spwntch/saas-starter';
+import { createSupabaseServerClient } from '@spwntch/saas-starter/server';
 import { redirect } from 'next/navigation';
 
 export default async function Account() {
-  const supabase = createClient();
+  const supabase = createSupabaseServerClient();
 
   const {
     data: { user },
