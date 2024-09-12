@@ -5,55 +5,5 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project txb-site --web",
-  "targets": {
-    "supa": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm dlx supabase ",
-        "cwd": "apps/txb-site"
-      }
-    },
-    "supa-types": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "pnpm dlx supabase gen types typescript --local > ../../libs/supabase-stripe-starter/src/lib/types/supabase.ts"
-        ],
-        "cwd": "apps/txb-site"
-      }
-    },
-    "supa-diff": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "pnpm dlx supabase db diff -f ",
-          "nx run resources:supa-types"
-        ],
-        "cwd": "apps/txb-site",
-        "parallel": false
-      }
-    },
-    "supa-pull": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "pnpm dlx supabase link --project-ref $SUPABASE_PROJECT_ID --password $SUPABASE_DATABASE_PASSWORD ",
-          "pnpm dlx supabase db pull"
-        ],
-        "cwd": "apps/txb-site",
-        "parallel": false
-      }
-    },
-    "supa-deploy": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "pnpm dlx supabase link --project-ref $SUPABASE_PROJECT_ID --password $SUPABASE_DATABASE_PASSWORD ",
-          "pnpm dlx supabase db push"
-        ],
-        "cwd": "apps/txb-site",
-        "parallel": false
-      }
-    }
-  }
+  "targets": {}
 }
