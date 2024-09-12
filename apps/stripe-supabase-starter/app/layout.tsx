@@ -1,10 +1,9 @@
 import { getURL } from '@spwntch/saas-starter';
 import { Metadata } from 'next';
 import { PropsWithChildren, Suspense } from 'react';
-import Footer from '../components/ui/Footer';
+import Navbar from '../components/ui/Navbar';
 import { Toaster } from '../components/ui/Toasts/toaster';
 import '../styles/main.css';
-import Navbar from '../components/ui/Navbar';
 
 const meta = {
   title: 'Next.js Subscription Starter',
@@ -57,7 +56,6 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         >
           {children}
         </main>
-        <Footer />
         <Suspense>
           <Toaster />
         </Suspense>
