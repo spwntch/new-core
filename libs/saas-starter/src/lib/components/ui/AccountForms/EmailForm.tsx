@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 import Card from '../Card';
 import { updateEmail } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 export default function EmailForm({
-  userEmail
+  userEmail,
 }: {
   userEmail: string | undefined;
 }) {
@@ -37,7 +37,7 @@ export default function EmailForm({
             We will email you to verify the change.
           </p>
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             form="emailForm"
             loading={isSubmitting}

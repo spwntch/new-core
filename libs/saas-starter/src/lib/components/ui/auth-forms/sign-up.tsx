@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 import React from 'react';
 import Link from 'next/link';
 import { signUp } from '../../../utils/auth-helpers/server';
@@ -14,7 +14,7 @@ interface SignUpProps {
   redirectMethod: string;
 }
 
-export  function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
+export function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
   const _router = useRouter();
   const router = redirectMethod === 'client' ? _router : null;
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,7 +56,7 @@ export  function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
             />
           </div>
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             className="mt-1"
             loading={isSubmitting}

@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 import { signInWithOAuth } from '../../../utils/auth-helpers/client';
 import { type Provider } from '@supabase/supabase-js';
 import { Github } from 'lucide-react';
@@ -12,13 +12,13 @@ type OAuthProviders = {
   icon: JSX.Element;
 };
 
-export  function OauthSignIn() {
+export function OauthSignIn() {
   const oAuthProviders: OAuthProviders[] = [
     {
       name: 'github',
       displayName: 'GitHub',
-      icon: <Github className="h-5 w-5" />
-    }
+      icon: <Github className="h-5 w-5" />,
+    },
     /* Add desired OAuth providers here */
   ];
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -39,7 +39,7 @@ export  function OauthSignIn() {
         >
           <input type="hidden" name="provider" value={provider.name} />
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             className="w-full"
             loading={isSubmitting}

@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 import LogoCloud from '../LogoCloud';
 import type { Subscription, Price, Product } from '../../../types';
 import { getStripe } from '../../../utils/stripe/client';
@@ -108,8 +108,8 @@ export default function Pricing({ user, products, subscription }: Props) {
               Pricing Plans
             </h1>
             <p className="max-w-2xl m-auto mt-5 text-xl text-zinc-200 sm:text-center sm:text-2xl">
-              Start creating with no monthly commitment, and then upgrade to
-              Pro when you&apos;re ready to scale.
+              Start creating with no monthly commitment, and then upgrade to Pro
+              when you&apos;re ready to scale.
             </p>
             <div className="relative self-center mt-6 bg-zinc-900 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
               {intervals.includes('month') && (
@@ -180,7 +180,7 @@ export default function Pricing({ user, products, subscription }: Props) {
                       </span>
                     </p>
                     <Button
-                      variant="slim"
+                      variant="outline"
                       type="button"
                       loading={priceIdLoading === price.id}
                       onClick={() => handleStripeCheckout(price)}

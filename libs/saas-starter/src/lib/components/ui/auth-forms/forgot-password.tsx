@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 import Link from 'next/link';
 import { requestPasswordUpdate } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
@@ -51,7 +51,7 @@ export function ForgotPassword({
             />
           </div>
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             className="mt-1"
             loading={isSubmitting}

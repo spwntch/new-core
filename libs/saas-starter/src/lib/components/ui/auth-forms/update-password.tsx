@@ -4,15 +4,13 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { handleRequest } from '../../../utils/auth-helpers/client';
 import { updatePassword } from '../../../utils/auth-helpers/server';
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 
 interface UpdatePasswordProps {
   redirectMethod: string;
 }
 
-export  function UpdatePassword({
-  redirectMethod,
-}: UpdatePasswordProps) {
+export function UpdatePassword({ redirectMethod }: UpdatePasswordProps) {
   const _router = useRouter();
   const router = redirectMethod === 'client' ? _router : null;
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,7 +50,7 @@ export  function UpdatePassword({
             />
           </div>
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             className="mt-1"
             loading={isSubmitting}

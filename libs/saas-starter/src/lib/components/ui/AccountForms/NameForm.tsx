@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import {Button} from '@spwntch/react-ui';
 import Card from '../Card';
 import { updateName } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
@@ -31,7 +31,7 @@ export default function NameForm({ userName }: { userName: string }) {
         <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
           <p className="pb-4 sm:pb-0">64 characters maximum</p>
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             form="nameForm"
             loading={isSubmitting}
