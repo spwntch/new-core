@@ -1,27 +1,31 @@
 'use client';
 
 import Button from '../Button';
-import React from 'react';
 import Link from 'next/link';
-import { signUp } from '../../../utils/auth-helpers/server';
+import { requestPasswordUpdate } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 // Define prop type with allowEmail boolean
-interface SignUpProps {
+interface ForgotPasswordProps {
   allowEmail: boolean;
   redirectMethod: string;
+  disableButton?: boolean;
 }
 
-export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
+export function ForgotPassword({
+  allowEmail,
+  redirectMethod,
+  disableButton,
+}: ForgotPasswordProps) {
   const _router = useRouter();
   const router = redirectMethod === 'client' ? _router : null;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true); // Disable the button while the request is being handled
-    await handleRequest(e, signUp, router);
+    await handleRequest(e, requestPasswordUpdate, router);
     setIsSubmitting(false);
   };
 
@@ -45,27 +49,18 @@ export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
               autoCorrect="off"
               className="w-full p-3 rounded-md bg-zinc-800"
             />
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              placeholder="Password"
-              type="password"
-              name="password"
-              autoComplete="current-password"
-              className="w-full p-3 rounded-md bg-zinc-800"
-            />
           </div>
           <Button
             variant="slim"
             type="submit"
             className="mt-1"
             loading={isSubmitting}
+            disabled={disableButton}
           >
-            Sign up
+            Send Email
           </Button>
         </div>
       </form>
-      <p>Already have an account?</p>
       <p>
         <Link href="/signin/password_signin" className="font-light text-sm">
           Sign in with email and password
@@ -78,6 +73,11 @@ export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
           </Link>
         </p>
       )}
+      <p>
+        <Link href="/signin/signup" className="font-light text-sm">
+          Don&apos;t have an account? Sign up
+        </Link>
+      </p>
     </div>
   );
 }

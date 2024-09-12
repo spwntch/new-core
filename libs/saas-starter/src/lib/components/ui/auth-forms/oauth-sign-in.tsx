@@ -12,7 +12,7 @@ type OAuthProviders = {
   icon: JSX.Element;
 };
 
-export default function OauthSignIn() {
+export  function OauthSignIn() {
   const oAuthProviders: OAuthProviders[] = [
     {
       name: 'github',

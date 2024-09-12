@@ -10,7 +10,7 @@ interface UpdatePasswordProps {
   redirectMethod: string;
 }
 
-export default function UpdatePassword({
+export  function UpdatePassword({
   redirectMethod,
 }: UpdatePasswordProps) {
   const _router = useRouter();

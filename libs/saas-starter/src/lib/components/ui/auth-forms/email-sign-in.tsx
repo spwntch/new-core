@@ -2,30 +2,30 @@
 
 import Button from '../Button';
 import Link from 'next/link';
-import { requestPasswordUpdate } from '../../../utils/auth-helpers/server';
+import { signInWithEmail } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-// Define prop type with allowEmail boolean
-interface ForgotPasswordProps {
-  allowEmail: boolean;
+// Define prop type with allowPassword boolean
+interface EmailSignInProps {
+  allowPassword: boolean;
   redirectMethod: string;
   disableButton?: boolean;
 }
 
-export default function ForgotPassword({
-  allowEmail,
+export function EmailSignIn({
+  allowPassword,
   redirectMethod,
   disableButton,
-}: ForgotPasswordProps) {
+}: EmailSignInProps) {
   const _router = useRouter();
   const router = redirectMethod === 'client' ? _router : null;
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true); // Disable the button while the request is being handled
-    await handleRequest(e, requestPasswordUpdate, router);
+    await handleRequest(e, signInWithEmail, router);
     setIsSubmitting(false);
   };
 
@@ -57,27 +57,24 @@ export default function ForgotPassword({
             loading={isSubmitting}
             disabled={disableButton}
           >
-            Send Email
+            Sign in
           </Button>
         </div>
       </form>
-      <p>
-        <Link href="/signin/password_signin" className="font-light text-sm">
-          Sign in with email and password
-        </Link>
-      </p>
-      {allowEmail && (
-        <p>
-          <Link href="/signin/email_signin" className="font-light text-sm">
-            Sign in via magic link
-          </Link>
-        </p>
+      {allowPassword && (
+        <>
+          <p>
+            <Link href="/signin/password_signin" className="font-light text-sm">
+              Sign in with email and password
+            </Link>
+          </p>
+          <p>
+            <Link href="/signin/signup" className="font-light text-sm">
+              Don&apos;t have an account? Sign up
+            </Link>
+          </p>
+        </>
       )}
-      <p>
-        <Link href="/signin/signup" className="font-light text-sm">
-          Don&apos;t have an account? Sign up
-        </Link>
-      </p>
     </div>
   );
 }

@@ -1,1 +1,3 @@
-export { default as Pricing } from './ui/pricing/pricing';
+export * from './ui/auth-forms';
+export * from './ui/pricing';
+
