@@ -2,7 +2,7 @@
 
 import Button from '../Button';
 import LogoCloud from '../LogoCloud';
-// import type { Tables } from '../../../types_db';
+import type { Subscription, Price, Product } from '../../../types';
 import { getStripe } from '../../../utils/stripe/client';
 import { checkoutWithStripe } from '../../../utils/stripe/server';
 import { getErrorRedirect } from '../../../utils/helpers';
@@ -11,9 +11,6 @@ import { cn } from '../../../utils/cn';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-type Subscription = any //Tables<'subscriptions'>;
-type Product = any // Tables<'products'>;
-type Price = any //Tables<'prices'>;
 interface ProductWithPrices extends Product {
   prices: Price[];
 }

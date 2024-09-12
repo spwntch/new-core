@@ -1,6 +1,4 @@
-// import type { Tables } from '../types_db';
-
-type Price = any //Tables<'prices'>;
+import type { Price } from '../types';
 
 export const getURL = (path = '') => {
   // Check if NEXT_PUBLIC_SITE_URL is set and non-empty. Set this to your site URL in production env.

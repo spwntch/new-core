@@ -1,12 +1,9 @@
 import { createClient } from '@supabase/supabase-js';
 import Stripe from 'stripe';
-// import type { Database, Tables, TablesInsert } from '../../types_db';
+import type { Database, Product, Price, SubscriptionsInsert } from '../../types';
 import { toDateTime } from '../helpers';
 import { stripe } from '../stripe/config';
 
-type Database = any;
-type Product = any //Tables<'products'>;
-type Price = any //Tables<'prices'>;
 
 // Change to control trial period length
 const TRIAL_PERIOD_DAYS = 0;
@@ -230,7 +227,7 @@ const manageSubscriptionStatusChange = async (
     expand: ['default_payment_method'],
   });
   // Upsert the latest status of the subscription object.
-  const subscriptionData: TablesInsert<'subscriptions'> = {
+  const subscriptionData: SubscriptionsInsert = {
     id: subscription.id,
     user_id: uuid,
     metadata: subscription.metadata,
