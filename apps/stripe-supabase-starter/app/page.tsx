@@ -5,7 +5,7 @@ export default async function PricingPage() {
   const supabase = createClient();
 
   const {
-    data: { user }
+    data: { user },
   } = await supabase.auth.getUser();
 
   const { data: subscription, error } = await supabase
