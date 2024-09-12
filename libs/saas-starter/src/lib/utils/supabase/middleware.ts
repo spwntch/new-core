@@ -1,7 +1,7 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr';
 import { type NextRequest, NextResponse } from 'next/server';
 
-export const createClient = (request: NextRequest) => {
+export const createSupabaseMiddlewareClient = (request: NextRequest) => {
   // Create an unmodified response
   let response = NextResponse.next({
     request: {
@@ -64,7 +64,7 @@ export const updateSession = async (request: NextRequest) => {
   try {
     // This `try/catch` block is only here for the interactive tutorial.
     // Feel free to remove once you have Supabase connected.
-    const { supabase, response } = createClient(request);
+    const { supabase, response } = createSupabaseMiddlewareClient(request);
 
     // This will refresh session if expired - required for Server Components
     // https://supabase.com/docs/guides/auth/server-side/nextjs

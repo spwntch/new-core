@@ -1,8 +1,8 @@
-import Pricing from '../components/ui/Pricing/Pricing';
-import { createClient } from '../utils/supabase/server';
+import { Pricing } from '@spwntch/saas-starter';
+import { createSupabaseServerClient } from '@spwntch/saas-starter/server';
 
 export default async function PricingPage() {
-  const supabase = createClient();
+  const supabase = createSupabaseServerClient();
 
   const {
     data: { user },

@@ -1,6 +1,6 @@
 'use client';
 
-import { createClient } from '../supabase/client';
+import { createSupabaseBrowserClient } from '../supabase/client';
 import { type Provider } from '@supabase/supabase-js';
 import { getURL } from '../helpers';
 import { redirectToPath } from './server';
@@ -33,12 +33,12 @@ export async function signInWithOAuth(e: React.FormEvent<HTMLFormElement>) {
   const provider = String(formData.get('provider')).trim() as Provider;
 
   // Create client-side supabase client and call signInWithOAuth
-  const supabase = createClient();
+  const supabase = createSupabaseBrowserClient();
   const redirectURL = getURL('/auth/callback');
   await supabase.auth.signInWithOAuth({
     provider: provider,
     options: {
-      redirectTo: redirectURL
-    }
+      redirectTo: redirectURL,
+    },
   });
 }
