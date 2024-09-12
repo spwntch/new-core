@@ -28,7 +28,9 @@
       "@/node-supabase": ["libs/node-supabase/src/index.ts"],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
-      "@spwntch/react-ui": ["packages/react-ui/src/index.ts"]
+      "@spwntch/react-ui": ["packages/react-ui/src/index.ts"],
+      "@spwntch/saas-starter": ["libs/saas-starter/src/index.ts"],
+      "@spwntch/saas-starter/server": ["libs/saas-starter/src/server.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
