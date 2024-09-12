@@ -1,11 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 import Stripe from 'stripe';
-import type { Database, Tables, TablesInsert } from '../../types_db';
+// import type { Database, Tables, TablesInsert } from '../../types_db';
 import { toDateTime } from '../helpers';
 import { stripe } from '../stripe/config';
 
-type Product = Tables<'products'>;
-type Price = Tables<'prices'>;
+type Database = any;
+type Product = any //Tables<'products'>;
+type Price = any //Tables<'prices'>;
 
 // Change to control trial period length
 const TRIAL_PERIOD_DAYS = 0;
