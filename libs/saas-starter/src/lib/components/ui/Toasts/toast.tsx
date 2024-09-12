@@ -3,7 +3,7 @@ import * as ToastPrimitives from '@radix-ui/react-toast';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { X } from 'lucide-react';
 
-import { cn } from '../../../utils/cn';
+import { cn } from '@spwntch/react-ui';
 
 const ToastProvider = ToastPrimitives.Provider;
 
@@ -30,12 +30,12 @@ const toastVariants = cva(
         default:
           'border bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50',
         destructive:
-          'destructive group border-red-500 bg-red-500 text-zinc-50 dark:border-red-900 dark:bg-red-900 dark:text-zinc-50'
-      }
+          'destructive group border-red-500 bg-red-500 text-zinc-50 dark:border-red-900 dark:bg-red-900 dark:text-zinc-50',
+      },
     },
     defaultVariants: {
-      variant: 'default'
-    }
+      variant: 'default',
+    },
   }
 );
 
@@ -124,5 +124,5 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-  ToastAction
+  ToastAction,
 };

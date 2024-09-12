@@ -9,3 +9,5 @@ export type SubscriptionsInsert = DbTables['subscriptions']['Insert']
 export type Price = DbTables['prices']['Row'];
 
 export type Product = DbTables['products']['Row'];
+
+export type User = DbTables['users']['Row'];
