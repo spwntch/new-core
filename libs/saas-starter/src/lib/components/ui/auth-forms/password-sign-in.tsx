@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import { Button } from '@spwntch/react-ui';
 import Link from 'next/link';
 import { signInWithPassword } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
@@ -13,7 +13,7 @@ interface PasswordSignInProps {
   redirectMethod: string;
 }
 
-export  function PasswordSignIn({
+export function PasswordSignIn({
   allowEmail,
   redirectMethod,
 }: PasswordSignInProps) {
@@ -58,10 +58,9 @@ export  function PasswordSignIn({
             />
           </div>
           <Button
-            variant="slim"
+            variant="outline"
             type="submit"
             className="mt-1"
-            loading={isSubmitting}
           >
             Sign in
           </Button>
