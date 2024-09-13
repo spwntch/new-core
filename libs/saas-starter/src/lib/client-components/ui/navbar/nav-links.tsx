@@ -6,13 +6,13 @@ import { handleRequest } from '../../../utils/auth-helpers/client';
 import Logo from '../../icons/Logo';
 import { usePathname, useRouter } from 'next/navigation';
 import { getRedirectMethod } from '../../../utils/auth-helpers/settings';
-import s from './Navbar.module.css';
+import s from './navbar.module.css';
 
-interface NavlinksProps {
+interface NavLinksProps {
   user?: any;
 }
 
-export default function Navlinks({ user }: NavlinksProps) {
+export default function NavLinks({ user }: NavLinksProps) {
   const pathname = usePathname();
   const _router = useRouter();
   const router = getRedirectMethod() === 'client' ? _router : null;
