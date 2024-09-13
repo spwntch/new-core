@@ -8,9 +8,9 @@ import { ContentContainer, ImageContainer } from '../../containers';
 
 export interface IFullImageHeroProps extends HTMLAttributes<HTMLDivElement> {
   navbarHeight?: number;
-  image: IImage;
+  image?: IImage;
   innerContent: IContent;
-  ribbon?: string
+  ribbon?: string;
   height?: string;
   hAlign?: 'left' | 'center' | 'right';
   vAlign?: 'top' | 'middle' | 'bottom';
@@ -35,6 +35,32 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
     ref
   ) => {
     const isMobile = useMediaQuery('(max-width: 640px)');
+
+    const content = (
+      <ContentContainer
+        innerContent={innerContent}
+        hero={true}
+        hAlign={hAlign}
+        vAlign={isMobile ? 'middle' : vAlign}
+        className={cn(isMobile && 'items-center', className)}
+      >
+        {innerContent.ctas?.length && (
+          <ButtonGroup className="sm:pb-6">
+            {innerContent.ctas.map((cta, index) => (
+              <Button
+                key={index}
+                size={isMobile ? 'default' : cta.variant?.size || 'default'}
+                variant={cta.variant?.variant || 'default'}
+                onClick={() => onCtaClick && onCtaClick(index)}
+              >
+                {cta.label}
+              </Button>
+            ))}
+          </ButtonGroup>
+        )}
+      </ContentContainer>
+    );
+
     return (
       <div
         className={cn(
@@ -49,35 +75,18 @@ export const FullImageHero = forwardRef<HTMLDivElement, IFullImageHeroProps>(
         ref={ref}
         {...props}
       >
-        {ribbon&&<div className="absolute right-0 top-0 h-24 w-24">
-          <div className="absolute transform rotate-45 bg-accent text-center text-white text-2xl font-semibold py-1 right-[-80px] top-[100px] w-[400px]">
-            {ribbon}
+        {ribbon && (
+          <div className="absolute right-0 top-0 h-24 w-24">
+            <div className="absolute transform rotate-45 bg-accent text-center text-white text-2xl font-semibold py-1 right-[-80px] top-[100px] w-[400px]">
+              {ribbon}
+            </div>
           </div>
-        </div>}
-        <ImageContainer image={image}>
-          <ContentContainer
-            innerContent={innerContent}
-            hero={true}
-            hAlign={hAlign}
-            vAlign={isMobile ? 'middle' : vAlign}
-            className={cn(isMobile && 'items-center', className)}
-          >
-            {innerContent.ctas?.length && (
-              <ButtonGroup className="sm:pb-6">
-                {innerContent.ctas.map((cta, index) => (
-                  <Button
-                    key={index}
-                    size={isMobile ? 'default' : cta.variant?.size || 'default'}
-                    variant={cta.variant?.variant || 'default'}
-                    onClick={() => onCtaClick && onCtaClick(index)}
-                  >
-                    {cta.label}
-                  </Button>
-                ))}
-              </ButtonGroup>
-            )}
-          </ContentContainer>
-        </ImageContainer>
+        )}
+        {image ? (
+          <ImageContainer image={image}>{content}</ImageContainer>
+        ) : (
+          <>{content}</>
+        )}
       </div>
     );
   }
