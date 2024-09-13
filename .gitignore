@@ -2,8 +2,6 @@
 
 # environment variables
 .env
-.env.preview
-.env.local
 
 # compiled output
 dist
@@ -49,6 +47,5 @@ Thumbs.db
 # Next.js
 .next
 out
-
 
 storybook-static
