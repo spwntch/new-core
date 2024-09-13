@@ -40,7 +40,7 @@ export default async function SignInPaths({
     const preferredSignInView =
       cookies().get('preferredSignInView')?.value || null;
     viewProp = getDefaultSignInView(preferredSignInView);
-    return redirect(`/signin/${viewProp}`);
+    return redirect(`auth/${viewProp}`);
   }
 
   // Check if the user is already logged in and redirect to the account page if so
@@ -53,7 +53,7 @@ export default async function SignInPaths({
   if (user && viewProp !== 'update_password') {
     return redirect('/');
   } else if (!user && viewProp === 'update_password') {
-    return redirect('/signin');
+    return redirect('auth');
   }
 
   return (

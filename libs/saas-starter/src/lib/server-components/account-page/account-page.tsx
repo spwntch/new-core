@@ -1,4 +1,8 @@
-import { CustomerPortalForm, EmailForm, NameForm } from '../../client-components';
+import {
+  CustomerPortalForm,
+  EmailForm,
+  NameForm,
+} from '../../client-components';
 import { createSupabaseServerClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 
@@ -25,7 +29,7 @@ export default async function AccountPage() {
   }
 
   if (!user) {
-    return redirect('/signin');
+    return redirect('auth');
   }
 
   return (

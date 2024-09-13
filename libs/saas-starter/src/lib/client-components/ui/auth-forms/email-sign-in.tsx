@@ -1,6 +1,6 @@
 'use client';
 
-import {Button} from '@spwntch/react-ui';
+import { Button } from '@spwntch/react-ui';
 import Link from 'next/link';
 import { signInWithEmail } from '../../../utils/auth-helpers/server';
 import { handleRequest } from '../../../utils/auth-helpers/client';
@@ -64,12 +64,12 @@ export function EmailSignIn({
       {allowPassword && (
         <>
           <p>
-            <Link href="/signin/password_signin" className="font-light text-sm">
+            <Link href="auth/password_signin" className="font-light text-sm">
               Sign in with email and password
             </Link>
           </p>
           <p>
-            <Link href="/signin/signup" className="font-light text-sm">
+            <Link href="auth/signup" className="font-light text-sm">
               Don&apos;t have an account? Sign up
             </Link>
           </p>

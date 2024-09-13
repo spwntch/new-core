@@ -1,6 +1,6 @@
 'use client';
 
-import {Button} from '@spwntch/react-ui';
+import { Button } from '@spwntch/react-ui';
 import type { Subscription, Price, Product } from '../../../types';
 import { getStripe } from '../../../utils/stripe/client';
 import { checkoutWithStripe } from '../../../utils/stripe/server';
@@ -47,7 +47,7 @@ export default function Pricing({ user, products, subscription }: Props) {
 
     if (!user) {
       setPriceIdLoading(undefined);
-      return router.push('/signin/signup');
+      return router.push('auth/signup');
     }
 
     const { errorRedirect, sessionId } = await checkoutWithStripe(

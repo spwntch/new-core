@@ -1,6 +1,6 @@
 'use client';
 
-import {Button} from '@spwntch/react-ui';
+import { Button } from '@spwntch/react-ui';
 import React from 'react';
 import Link from 'next/link';
 import { signUp } from '../../../utils/auth-helpers/server';
@@ -67,13 +67,13 @@ export function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
       </form>
       <p>Already have an account?</p>
       <p>
-        <Link href="/signin/password_signin" className="font-light text-sm">
+        <Link href="auth/password_signin" className="font-light text-sm">
           Sign in with email and password
         </Link>
       </p>
       {allowEmail && (
         <p>
-          <Link href="/signin/email_signin" className="font-light text-sm">
+          <Link href="auth/email_signin" className="font-light text-sm">
             Sign in via magic link
           </Link>
         </p>

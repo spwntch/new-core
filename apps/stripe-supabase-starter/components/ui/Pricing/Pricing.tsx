@@ -47,7 +47,7 @@ export default function Pricing({ user, products, subscription }: Props) {
 
     if (!user) {
       setPriceIdLoading(undefined);
-      return router.push('/signin/signup');
+      return router.push('auth/signup');
     }
 
     const { errorRedirect, sessionId } = await checkoutWithStripe(
@@ -106,7 +106,8 @@ export default function Pricing({ user, products, subscription }: Props) {
               Pricing Plans
             </h1>
             <p className="max-w-lg m-auto mt-5 text-xl text-zinc-200 sm:text-center sm:text-2xl">
-              Start creating for free, and then upgrade to to Pro when you&apos;re ready to scale.
+              Start creating for free, and then upgrade to to Pro when
+              you&apos;re ready to scale.
             </p>
             <div className="relative self-center mt-6 bg-zinc-900 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
               {intervals.includes('month') && (
