@@ -1,6 +1,6 @@
 'use client';
 
-import { cn } from '../../../utils/cn';
+import { cn } from '@spwntch/react-ui';
 import React, { forwardRef, useRef, ButtonHTMLAttributes } from 'react';
 import { mergeRefs } from 'react-merge-refs';
 
