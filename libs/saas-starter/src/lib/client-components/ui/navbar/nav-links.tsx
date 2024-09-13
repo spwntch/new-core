@@ -7,9 +7,10 @@ import Logo from '../../icons/Logo';
 import { usePathname, useRouter } from 'next/navigation';
 import { getRedirectMethod } from '../../../utils/auth-helpers/settings';
 import s from './navbar.module.css';
+import { User } from '../../../types';
 
 interface NavLinksProps {
-  user?: any;
+  user?: User | null;
 }
 
 export default function NavLinks({ user }: NavLinksProps) {

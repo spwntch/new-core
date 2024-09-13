@@ -1,6 +1,7 @@
 import { createSupabaseServerClient } from '../../../utils/supabase/server';
 import s from './navbar.module.css';
 import NavLinks from './nav-links';
+import { User } from '../../../types';
 
 export default async function Navbar() {
   const supabase = createSupabaseServerClient();
@@ -15,7 +16,7 @@ export default async function Navbar() {
         Skip to content
       </a> */}
       <div className="max-w-6xl px-6 mx-auto">
-        <NavLinks user={user} />
+        <NavLinks user={user as User | null} />
       </div>
     </nav>
   );

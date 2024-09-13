@@ -1,7 +1,7 @@
 'use client';
 
 import { FullImageHero } from "@spwntch/react-ui";
-import { HERO_CONTENT, HERO_IMAGE } from "../config/website/home/hero";
+import { HERO_CONTENT } from "../config/website/home/hero";
 
 const HomePage = () => {
   return  <div className="flex flex-col">

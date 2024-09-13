@@ -1,5 +1,6 @@
 'use client';
 import { Button, cn } from '@spwntch/react-ui';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Price, Product, Subscription } from '@spwntch/saas-starter';
 
 export interface ProductWithPrices extends Product {

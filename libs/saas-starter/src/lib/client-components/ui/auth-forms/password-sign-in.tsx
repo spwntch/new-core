@@ -57,7 +57,12 @@ export function PasswordSignIn({
               className="w-full p-3 rounded-md bg-zinc-800"
             />
           </div>
-          <Button variant="outline" type="submit" className="mt-1">
+          <Button
+            variant="outline"
+            type="submit"
+            className="mt-1"
+            loading={isSubmitting}
+          >
             Sign in
           </Button>
         </div>
