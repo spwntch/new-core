@@ -1,5 +1,5 @@
 import { AuthShell } from '@/next-auth-pages';
-import '../global.css';
+// import '../global.css';
 import { BRAND } from '../../config/brand';
 
 export const metadata = {

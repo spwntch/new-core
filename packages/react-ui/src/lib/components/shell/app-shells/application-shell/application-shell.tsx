@@ -5,6 +5,10 @@ import { MobileAppNavDrawer } from '../../nav/mobile-app-nav-drawer/mobile-app-n
 import { SessionMenu } from '../../session-menu/session-menu';
 
 export const ApplicationShell = ({ children }: PropsWithChildren) => {
+  const handleSignOut = () => {
+    console.log('Sign out');
+  };
+
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       <DesktopSideNavbar />
@@ -14,7 +18,10 @@ export const ApplicationShell = ({ children }: PropsWithChildren) => {
           <div className="w-full flex-1">
             <SearchBar />
           </div>
-          <SessionMenu avatarSrc="/images/team/dave-benjamin.webp" />
+          <SessionMenu
+            avatarSrc="/images/team/dave-benjamin.webp"
+            onSignOut={handleSignOut}
+          />
         </header>
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
           {children}

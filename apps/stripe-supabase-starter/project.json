@@ -1,0 +1,80 @@
+{
+  "name": "stripe-supabase-starter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/stripe-supabase-starter",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project stripe-supabase-starter --web",
+  "targets": {
+    "stripe-login": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "stripe login",
+        "cwd": "apps/stripe-supabase-starter"
+      }
+    },
+    "stripe-listen": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "stripe listen --forward-to=localhost:3000/api/webhooks",
+        "cwd": "apps/stripe-supabase-starter"
+      }
+    },
+    "stripe-fixtures": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "stripe fixtures fixtures/stripe-fixtures.json",
+        "cwd": "apps/stripe-supabase-starter"
+      }
+    },
+    "supa": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm dlx supabase ",
+        "cwd": "apps/stripe-supabase-starter"
+      }
+    },
+    "supa-types": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm dlx supabase gen types typescript --local > ./types/supabase.ts"
+        ],
+        "cwd": "apps/stripe-supabase-starter"
+      }
+    },
+    "supa-diff": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm dlx supabase db diff -f ",
+          "nx run resources:supa-types"
+        ],
+        "cwd": "apps/stripe-supabase-starter",
+        "parallel": false
+      }
+    },
+    "supa-pull": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm dlx supabase link --project-ref $SUPABASE_PROJECT_ID --password $SUPABASE_DATABASE_PASSWORD ",
+          "pnpm dlx supabase db pull"
+        ],
+        "cwd": "apps/stripe-supabase-starter",
+        "parallel": false
+      }
+    },
+    "supa-deploy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm dlx supabase link --project-ref $SUPABASE_PROJECT_ID --password $SUPABASE_DATABASE_PASSWORD ",
+          "pnpm dlx supabase db push"
+        ],
+        "cwd": "apps/stripe-supabase-starter",
+        "parallel": false
+      }
+    }
+  }
+}
