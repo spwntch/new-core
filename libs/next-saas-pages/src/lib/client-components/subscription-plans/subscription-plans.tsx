@@ -17,7 +17,8 @@ export const SubscriptionPlans = ({
   return (
     <div id={id} className={cn('flex-col pt-12 pb-28', className)}>
       <div className="md:container px-3">
-        <ContentContainer innerContent={header}>{children}</ContentContainer>
+        <ContentContainer innerContent={header} />
+        <div>{children}</div>
       </div>
     </div>
   );
