@@ -1,4 +1,5 @@
 import { AuthShell } from '@/next-saas-pages';
+import { AUTH } from '../../config/auth';
 import { BRAND } from '../../config/brand';
 import '../global.css';
 
@@ -15,7 +16,9 @@ export default async function AuthLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <AuthShell brand={BRAND}>{children}</AuthShell>
+        <AuthShell brand={BRAND} auth={AUTH}>
+          {children}
+        </AuthShell>
       </body>
     </html>
   );

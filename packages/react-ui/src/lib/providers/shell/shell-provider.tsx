@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { IBrand, INavItem } from '../../types';
+import { AuthProvider, IAuthContext } from './auth-provider';
 import { BrandProvider } from './brand-provider';
 import { NavProvider } from './nav-provider';
 import { ThemeProvider } from './theme-provider';
@@ -10,6 +11,7 @@ export interface IShellProviderProps {
   defaultTheme?: 'light' | 'dark' | 'system';
   brand?: IBrand;
   navItems?: INavItem[];
+  auth?: IAuthContext;
 }
 
 export const ShellProvider = ({
@@ -28,9 +30,7 @@ export const ShellProvider = ({
     >
       <BrandProvider brand={brand}>
         <NavProvider navItems={navItems}>
-          {/* <AuthBackendContextProvider backendProvider={authBackendProvider}> */}
-          {children}
-          {/* </AuthBackendContextProvider> */}
+          <AuthProvider>{children}</AuthProvider>
         </NavProvider>
       </BrandProvider>
     </ThemeProvider>
