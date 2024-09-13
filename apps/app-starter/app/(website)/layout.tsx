@@ -16,7 +16,7 @@ export default function WebsiteLayout({
 
   const cta = {
     label: 'SIGN IN',
-    href: '/dashboard',
+    href: '/auth',
   };
 
   return (
