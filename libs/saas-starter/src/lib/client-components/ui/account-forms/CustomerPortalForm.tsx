@@ -1,11 +1,12 @@
 'use client';
 
-import { Card } from '@spwntch/react-ui';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Price, Product, Subscription } from '../../../types';
 import { createStripePortal } from '../../../utils/stripe/server';
+import { Card } from '../card';
+import { Button } from '@spwntch/react-ui';
 
 type SubscriptionWithPriceAndProduct = Subscription & {
   prices:
@@ -42,23 +43,23 @@ export function CustomerPortalForm({ subscription }: Props) {
   return (
     <Card
       title="Your Plan"
-      // description={
-      //   subscription
-      //     ? `You are currently on the ${subscription?.prices?.products?.name} plan.`
-      //     : 'You are not currently subscribed to any plan.'
-      // }
-      // footer={
-      //   <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-      //     <p className="pb-4 sm:pb-0">Manage your subscription on Stripe.</p>
-      //     <Button
-      //       variant="outline"
-      //       onClick={handleStripePortalRequest}
-      //       loading={isSubmitting}
-      //     >
-      //       Open customer portal
-      //     </Button>
-      //   </div>
-      // }
+      description={
+        subscription
+          ? `You are currently on the ${subscription?.prices?.products?.name} plan.`
+          : 'You are not currently subscribed to any plan.'
+      }
+      footer={
+        <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
+          <p className="pb-4 sm:pb-0">Manage your subscription on Stripe.</p>
+          <Button
+            variant="outline"
+            onClick={handleStripePortalRequest}
+            loading={isSubmitting}
+          >
+            Open customer portal
+          </Button>
+        </div>
+      }
     >
       <div className="mt-8 mb-4 text-xl font-semibold">
         {subscription ? (

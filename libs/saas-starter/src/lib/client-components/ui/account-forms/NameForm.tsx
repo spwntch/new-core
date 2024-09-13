@@ -1,12 +1,13 @@
 'use client';
 
-import { Card } from '@spwntch/react-ui';
+import { Button } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { handleRequest } from '../../../utils/auth-helpers/client';
 import { updateName } from '../../../utils/auth-helpers/server';
+import { Card } from '../card';
 
-export  function NameForm({ userName }: { userName: string }) {
+export function NameForm({ userName }: { userName: string }) {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -25,20 +26,20 @@ export  function NameForm({ userName }: { userName: string }) {
   return (
     <Card
       title="Your Name"
-      // description="Please enter your full name, or a display name you are comfortable with."
-      // footer={
-      //   <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
-      //     <p className="pb-4 sm:pb-0">64 characters maximum</p>
-      //     <Button
-      //       variant="outline"
-      //       type="submit"
-      //       form="nameForm"
-      //       loading={isSubmitting}
-      //     >
-      //       Update Name
-      //     </Button>
-      //   </div>
-      // }
+      description="Please enter your full name, or a display name you are comfortable with."
+      footer={
+        <div className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
+          <p className="pb-4 sm:pb-0">64 characters maximum</p>
+          <Button
+            variant="outline"
+            type="submit"
+            form="nameForm"
+            loading={isSubmitting}
+          >
+            Update Name
+          </Button>
+        </div>
+      }
     >
       <div className="mt-8 mb-4 text-xl font-semibold">
         <form id="nameForm" onSubmit={(e) => handleSubmit(e)}>
