@@ -27,7 +27,6 @@
       ],
       "@/next-saas-pages": ["libs/next-saas-pages/src/index.ts"],
       "@/next-saas-pages/server": ["libs/next-saas-pages/src/server.ts"],
-      "@/node-supabase": ["libs/node-supabase/src/index.ts"],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
       "@spwntch/react-ui": ["packages/react-ui/src/index.ts"],

@@ -1,6 +1,4 @@
 import { AppShell } from '@/next-app-pages';
-import { createServerDbClient, ServerDbClients } from '@/node-supabase';
-import { redirect } from 'next/navigation';
 import { NAV } from '../../config/app/nav';
 import { BRAND } from '../../config/brand';
 import '../global.css';
@@ -15,17 +13,17 @@ export default async function AppLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = createServerDbClient(ServerDbClients.ServerComponent);
+  // const supabase = createServerDbClient(ServerDbClients.ServerComponent);
 
-  const {
-    data: { session },
-  } = await supabase.auth.getSession();
-  if (!session) redirect('/auth/signin');
-  const { data: user, error } = await supabase
-    .from('users')
-    .select('*')
-    .eq('id', session.user.id)
-    .single();
+  // const {
+  //   data: { session },
+  // } = await supabase.auth.getSession();
+  // if (!session) redirect('/auth/signin');
+  // const { data: user, error } = await supabase
+  //   .from('users')
+  //   .select('*')
+  //   .eq('id', session.user.id)
+  //   .single();
 
   // console.log({ user, error });
   // if (user && !user.admin_role)
