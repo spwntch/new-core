@@ -7,51 +7,65 @@ export const NAV: INavItem[] = [
     href: '/about',
   },
   {
-    label: 'Products',
+    label: 'AI',
     children: [
       {
         label: 'ICP Generator',
         description:
           'Create precise customer profiles instantly with our custom AI models.',
-        href: '/products/icp-generator',
+        href: '/products/ai/icp-generator',
       },
       {
         label: 'Brand Strat Generator',
         description:
           'Create a detailed brand strategy instantly with our custom AI models.',
-        href: '/products/bx-generator',
+        href: '/products/ai/bx-generator',
       },
       {
         label: 'Journey Map Generator',
         description:
           'Create rich customer journey maps instantly with our custom AI models.',
-        href: '/products/journey-generator',
+        href: '/products/ai/journey-generator',
       },
     ],
   },
-  // {
-  //   label: 'Services',
-  //   children: [
-  //     {
-  //       label: 'ICP Exploration',
-  //       description:
-  //         'Dive really deep into the mind of your ideal customer profile. Understand their needs, wants, and desires.',
-  //       href: '/services/icp-exploration',
-  //     },
-  //     {
-  //       label: 'Go-To-Market Strategy',
-  //       description:
-  //         'Develop a comprehensive go-to-market strategy that aligns with your business goals.',
-  //       href: '/services/gtm-strategy',
-  //     },
-  //     {
-  //       label: 'UX Deep Dive',
-  //       description:
-  //         'Get a comprehensive assessment of your user experience to identify areas of improvement.',
-  //       href: '/services/ux-deep-dive',
-  //     },
-  //   ],
-  // },
+  {
+    label: 'Playbooks',
+    children: [
+      {
+        label: 'ICP Playbook',
+
+        href: '/products/playbooks/icp-playbook',
+      },
+      {
+        label: 'Brand Experience Playbook',
+        href: '/products/playbooks/bx-generator',
+      },
+    ],
+  },
+  {
+    label: 'Services',
+    children: [
+      {
+        label: 'ICP Exploration',
+        description:
+          'Dive really deep into the mind of your ideal customer profile. Understand their needs, wants, and desires.',
+        href: '/services/icp-exploration',
+      },
+      {
+        label: 'Go-To-Market Strategy',
+        description:
+          'Develop a comprehensive go-to-market strategy that aligns with your business goals.',
+        href: '/services/gtm-strategy',
+      },
+      {
+        label: 'UX Deep Dive',
+        description:
+          'Get a comprehensive assessment of your user experience to identify areas of improvement.',
+        href: '/services/ux-deep-dive',
+      },
+    ],
+  },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
