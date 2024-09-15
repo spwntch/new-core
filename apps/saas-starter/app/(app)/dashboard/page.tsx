@@ -1,11 +1,10 @@
-'use client';
-import { Button } from '@spwntch/react-ui';
+import { SignOutButton } from '@/next-saas';
 
 const Dashboard = () => {
   return (
     <div>
       <h1>Dashboard</h1>
-      <Button>SIGN OUT</Button>
+      <SignOutButton />
     </div>
   );
 };
