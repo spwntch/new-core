@@ -1,7 +1,8 @@
-import { Pricing } from '@/next-saas';
+import { Pricing, SubscriptionPlans } from '@/next-saas';
 import { createSupabaseServerClient } from '@/next-saas/server';
+import { SUBSCRIPTION_PLANS } from '../../../config/website/pricing/subscription-plans';
 
-export default async function PricingPage() {
+const PricingPage = async () => {
   const supabase = createSupabaseServerClient();
 
   const {
@@ -27,10 +28,14 @@ export default async function PricingPage() {
     .order('unit_amount', { referencedTable: 'prices' });
 
   return (
-    <Pricing
-      user={user}
-      products={products ?? []}
-      subscription={subscription}
-    />
+    <SubscriptionPlans id="subscription-plans" header={SUBSCRIPTION_PLANS}>
+      <Pricing
+        user={user}
+        products={products ?? []}
+        subscription={subscription}
+      />
+    </SubscriptionPlans>
   );
-}
+};
+
+export default PricingPage;
