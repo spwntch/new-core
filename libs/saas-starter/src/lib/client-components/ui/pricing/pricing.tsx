@@ -1,14 +1,6 @@
 'use client';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import {
-  BillingInterval,
-  BillingIntervals,
-  NoPlansFound,
-  Plans,
-  ProductWithPrices,
-  SubscriptionWithProduct,
-} from '@/next-saas-pages';
 import { User } from '@supabase/supabase-js';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -16,6 +8,9 @@ import type { Price } from '../../../types';
 import { getErrorRedirect } from '../../../utils/helpers';
 import { getStripe } from '../../../utils/stripe/client';
 import { checkoutWithStripe } from '../../../utils/stripe/server';
+import { Plans, ProductWithPrices, SubscriptionWithProduct } from '../../subscription-plans/plans';
+import { BillingInterval, BillingIntervals } from '../../subscription-plans/billing-intervals';
+import { NoPlansFound } from '../../subscription-plans/no-plans-found';
 
 
 export interface PricingProps {

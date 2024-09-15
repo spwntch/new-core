@@ -1,5 +1,3 @@
-import { AuthShell } from '@/next-saas-pages';
-import { BRAND } from '../../config/brand';
 import '../global.css';
 
 export const metadata = {
@@ -15,7 +13,7 @@ export default async function AppLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <AuthShell brand={BRAND}>{children}</AuthShell>
+        {/* <AuthShell brand={BRAND}>{children}</AuthShell> */}
       </body>
     </html>
   );
