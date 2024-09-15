@@ -12,9 +12,7 @@ export default async function AppLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        {/* <AuthShell brand={BRAND}>{children}</AuthShell> */}
-      </body>
+      <body>{/* <AuthShell brand={BRAND}>{children}</AuthShell> */}</body>
     </html>
   );
 }

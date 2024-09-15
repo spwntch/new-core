@@ -1,8 +1,6 @@
 import { IContent, IImage } from '@spwntch/react-ui';
 import { Rocket, Code, Database } from 'lucide-react';
 
-
-
 export const HERO_CONTENT: IContent = {
   title: {
     content: 'Kickstart Your SaaS with Our Open-Source App Starter',

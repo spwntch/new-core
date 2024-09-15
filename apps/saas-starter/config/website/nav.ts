@@ -9,5 +9,4 @@ export const NAV: INavItem[] = [
     label: 'Pricing',
     href: '/pricing',
   },
-
 ];
