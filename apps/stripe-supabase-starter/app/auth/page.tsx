@@ -1,2 +1,2 @@
-import { SignInPage } from '@spwntch/saas-starter/server';
+import { SignInPage } from '@/next-saas/server';
 export default SignInPage;

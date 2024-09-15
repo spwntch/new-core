@@ -1,1 +1,1 @@
-export { postStripeWebhooks as POST } from '@spwntch/saas-starter/server';
+export { postStripeWebhooks as POST } from '@/next-saas/server';

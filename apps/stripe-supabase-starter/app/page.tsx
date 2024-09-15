@@ -1,5 +1,5 @@
-import { Pricing } from '@spwntch/saas-starter';
-import { createSupabaseServerClient } from '@spwntch/saas-starter/server';
+import { Pricing } from '@/next-saas';
+import { createSupabaseServerClient } from '@/next-saas/server';
 
 export default async function PricingPage() {
   const supabase = createSupabaseServerClient();

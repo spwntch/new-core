@@ -1,4 +1,4 @@
-import { getURL, Navbar } from '@spwntch/saas-starter';
+import { getURL, Navbar } from '@/next-saas';
 import { Metadata } from 'next';
 import { PropsWithChildren, Suspense } from 'react';
 import { Toaster } from '../components/ui/Toasts/toaster';

@@ -1,2 +1,2 @@
-import { SignInPaths } from '@spwntch/saas-starter/server';
+import { SignInPaths } from '@/next-saas/server';
 export default SignInPaths;

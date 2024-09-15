@@ -1,1 +1,1 @@
-export { getAuthResetPassword as GET } from '@spwntch/saas-starter/server';
+export { getAuthResetPassword as GET } from '@/next-saas/server';

@@ -1,2 +1,2 @@
-import {AccountPage} from '@spwntch/saas-starter/server';
+import { AccountPage } from '@/next-saas/server';
 export default AccountPage;

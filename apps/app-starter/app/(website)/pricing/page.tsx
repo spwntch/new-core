@@ -1,5 +1,6 @@
-import { Pricing } from '@spwntch/saas-starter';
-import { createSupabaseServerClient } from '@spwntch/saas-starter/server';
+import { Pricing, SubscriptionPlans } from '@/next-saas';
+import { createSupabaseServerClient } from '@/next-saas/server';
+import { SUBSCRIPTION_PLANS } from '../../../config/website/pricing/subscription-plans';
 
 const PricingPage = async () => {
   const supabase = createSupabaseServerClient();
@@ -27,13 +28,13 @@ const PricingPage = async () => {
     .order('unit_amount', { referencedTable: 'prices' });
 
   return (
-    // <SubscriptionPlans id="subscription-plans" header={SUBSCRIPTION_PLANS}>
+    <SubscriptionPlans id="subscription-plans" header={SUBSCRIPTION_PLANS}>
       <Pricing
         user={user}
         products={products ?? []}
         subscription={subscription}
       />
-    // </SubscriptionPlans>
+    </SubscriptionPlans>
   );
 };
 
