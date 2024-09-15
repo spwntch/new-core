@@ -1,16 +1,14 @@
-// import Logo from '../../../components/icons/Logo';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import {
   Card,
   EmailSignIn,
   ForgotPassword,
-  OauthSignIn,
   PasswordSignIn,
   SignUp,
   UpdatePassword,
 } from '../../old-client-components';
-// import Card from '../../../components/ui/Card';
+import { AuthFormsCard, OauthSignIn } from '../../client-components/auth-forms';
 import {
   getAuthTypes,
   getDefaultSignInView,
@@ -58,10 +56,23 @@ export default async function SignInPaths({
 
   return (
     <div className="flex justify-center height-screen-helper">
-      <div className="flex flex-col justify-between max-w-lg p-3 m-auto w-80 ">
+      <div className="flex flex-col justify-between max-w-xl p-3 m-auto  ">
         <div className="flex justify-center pb-12 ">
           {/* <Logo width="64px" height="64px" /> */}
         </div>
+        <AuthFormsCard>
+          {viewProp !== 'update_password' &&
+            viewProp !== 'signup' &&
+            allowOauth && (
+              <>
+                {/* <Separator text="Third-party sign-in" /> */}
+                <h2 className="mt-4 text-xl text-center">
+                  Third-Party Sign In
+                </h2>
+                <OauthSignIn />
+              </>
+            )}
+        </AuthFormsCard>
         <Card
           title={
             viewProp === 'forgot_password'
@@ -99,14 +110,6 @@ export default async function SignInPaths({
           {viewProp === 'signup' && (
             <SignUp allowEmail={allowEmail} redirectMethod={redirectMethod} />
           )}
-          {viewProp !== 'update_password' &&
-            viewProp !== 'signup' &&
-            allowOauth && (
-              <>
-                {/* <Separator text="Third-party sign-in" /> */}
-                <OauthSignIn />
-              </>
-            )}
         </Card>
       </div>
     </div>
