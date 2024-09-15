@@ -3,6 +3,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { handleRequest } from '../../utils/auth-helpers/client';
 import { SignOut } from '../../utils/auth-helpers/server';
 import { getRedirectMethod } from '../../utils/auth-helpers/settings';
+import { Button } from '@spwntch/react-ui';
 
 export const SignOutButton = () => {
   const pathname = usePathname();
@@ -12,7 +13,7 @@ export const SignOutButton = () => {
   return (
     <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
       <input type="hidden" name="pathName" value={pathname} />
-      <button type="submit">Sign out</button>
+      <Button type="submit">Sign out</Button>
     </form>
   );
 };
