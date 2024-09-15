@@ -1,5 +1,5 @@
 @import '../../../tailwind/spawntech.css';
 
-body.loading * {
+/* body.loading * {
   transition: none !important;
-}
+} */
