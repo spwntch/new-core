@@ -4,20 +4,20 @@
 import { User } from '@supabase/supabase-js';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
-import type { Price } from '../../../types';
-import { getErrorRedirect } from '../../../utils/helpers';
-import { getStripe } from '../../../utils/stripe/client';
-import { checkoutWithStripe } from '../../../utils/stripe/server';
+import type { Price } from '../../types';
+import { getErrorRedirect } from '../../utils/helpers';
+import { getStripe } from '../../utils/stripe/client';
+import { checkoutWithStripe } from '../../utils/stripe/server';
 import {
   Plans,
   ProductWithPrices,
   SubscriptionWithProduct,
-} from '../../subscription-plans/plans';
+} from '../subscription-plans/plans';
 import {
   BillingInterval,
   BillingIntervals,
-} from '../../subscription-plans/billing-intervals';
-import { NoPlansFound } from '../../subscription-plans/no-plans-found';
+} from '../subscription-plans/billing-intervals';
+import { NoPlansFound } from '../subscription-plans/no-plans-found';
 
 export interface PricingProps {
   user: User | null | undefined;

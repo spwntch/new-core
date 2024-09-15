@@ -2,7 +2,7 @@ import {
   CustomerPortalForm,
   EmailForm,
   NameForm,
-} from '../../client-components';
+} from '../../old-client-components';
 import { createSupabaseServerClient } from '../../utils/supabase/server';
 import { redirect } from 'next/navigation';
 

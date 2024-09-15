@@ -9,7 +9,7 @@ import {
   PasswordSignIn,
   SignUp,
   UpdatePassword,
-} from '../../client-components';
+} from '../../old-client-components';
 // import Card from '../../../components/ui/Card';
 import {
   getAuthTypes,

@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { SignOut } from '../../../utils/auth-helpers/server';
-import { handleRequest } from '../../../utils/auth-helpers/client';
-import Logo from '../../icons/Logo';
 import { usePathname, useRouter } from 'next/navigation';
-import { getRedirectMethod } from '../../../utils/auth-helpers/settings';
-import s from './navbar.module.css';
 import { User } from '../../../types';
+import { handleRequest } from '../../../utils/auth-helpers/client';
+import { SignOut } from '../../../utils/auth-helpers/server';
+import { getRedirectMethod } from '../../../utils/auth-helpers/settings';
+import Logo from '../../icons/Logo';
+import s from './navbar.module.css';
 
 interface NavLinksProps {
   user?: User | null;
