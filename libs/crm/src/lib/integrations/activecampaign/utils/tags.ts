@@ -1,6 +1,8 @@
 'use server';
 
-export const readTags = async (): Promise<any[]> => {
+import { Tag } from '../../../types';
+
+export const readTags = async (): Promise<Tag[]> => {
   const endpoint = `${process.env['NEXT_PUBLIC_ACTIVECAMPAIGN_URL']}/api/3/tags`;
   const response = await fetch(endpoint, {
     method: 'GET',
