@@ -16,6 +16,11 @@
     "storybook": "pnpm dlx nx run storybook:storybook",
     "build": "pnpm dlx nx run txb-site:build",
     "dev": "pnpm dlx nx run txb-site:dev",
+    "supa:start":"pnpm dlx nx run txb-site:supa start",
+    "supa:stop":"pnpm dlx nx run txb-site:supa stop --no-backup",
+    "supa:reset":"pnpm dlx nx run txb-site:supa db reset",
+    "stripe:login":"pnpm dlx nx run txb-site:stripe-login",
+    "stripe:listen":"pnpm dlx nx run txb-site:stripe-listen",
     "ci": "pnpm dlx nx run-many -t build lint test build-storybook"
   },
   "private": true,
