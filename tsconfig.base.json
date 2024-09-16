@@ -25,6 +25,8 @@
       "@/next-marketing-pages/server": [
         "libs/next-marketing-pages/src/server.ts"
       ],
+      "@/next-supabase": ["libs/next-supabase/src/index.ts"],
+      "@/next-supabase/server": ["libs/next-supabase/src/server.ts"],
       "@/node-supabase": ["libs/node-supabase/src/index.ts"],
       "@/react-tracking": ["libs/react-tracking/src/index.ts"],
       "@/storybook": ["storybook/src/index.ts"],
