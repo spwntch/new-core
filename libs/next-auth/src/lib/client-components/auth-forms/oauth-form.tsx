@@ -1,11 +1,12 @@
+'use client';
 import { OauthButton, OauthProviders } from '@spwntch/react-ui';
-import { oauthSigninAction } from '../../../../server-actions';
+import { oauthSigninAction } from '../../server-actions';
 
 type OauthFormProps = {
   providers: OauthProviders[];
 };
 
-const OauthForm = ({ providers }: OauthFormProps) => {
+export const OauthForm = ({ providers }: OauthFormProps) => {
   return (
     <div className="w-full flex justify-around">
       {providers.map((provider) => (
@@ -17,5 +18,3 @@ const OauthForm = ({ providers }: OauthFormProps) => {
     </div>
   );
 };
-
-export default OauthForm

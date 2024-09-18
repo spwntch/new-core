@@ -1,4 +1,4 @@
-import { AuthShell } from '@/next-auth-pages';
+import { AuthShell } from '@/next-auth';
 import '../global.css';
 import { BRAND } from '../../config/brand';
 

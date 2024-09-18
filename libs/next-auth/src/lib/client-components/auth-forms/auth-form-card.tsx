@@ -1,9 +1,4 @@
-import {
-    Card,
-    CardContent,
-    CardHeader,
-    Logo
-} from '@spwntch/react-ui';
+import { Card, CardContent, CardHeader, Logo } from '@spwntch/react-ui';
 import { useRouter } from 'next/navigation';
 import { PropsWithChildren } from 'react';
 

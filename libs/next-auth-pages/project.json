@@ -1,9 +1,0 @@
-{
-  "name": "next-auth-pages",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/next-auth-pages/src",
-  "projectType": "library",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project next-auth-pages --web",
-  "targets": {}
-}

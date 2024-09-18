@@ -1,4 +1,4 @@
-import { SignInPage } from '@/next-auth-pages';
+import { SignInPage } from '@/next-auth';
 
 const Signin = () => {
   return <SignInPage />;
